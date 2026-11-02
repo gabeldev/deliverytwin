@@ -1,0 +1,60 @@
+{
+ "mdrp": {
+  "instances": [
+   "0o100t100s1p100",
+   "1o100t100s1p100",
+   "2o100t100s1p100",
+   "3o100t100s1p100",
+   "4o100t100s1p100",
+   "5o100t100s1p100",
+   "6o100t100s1p100",
+   "7o100t100s1p100",
+   "8o100t100s1p100",
+   "9o100t100s1p100"
+  ],
+  "prep_minutes": {
+   "mean": 17.652378829373927,
+   "p50": 15.0,
+   "p90": 30.0,
+   "sigma_log": 0.7982095137569586
+  },
+  "restaurant_to_customer_travel_min": {
+   "p50": 8.234375,
+   "p90": 17.681528662420384
+  },
+  "shift_minutes": {
+   "p50": 180.0,
+   "min": 15.0,
+   "max": 492.0
+  },
+  "per_instance_median": {
+   "orders": 1428.0,
+   "restaurants": 203.0,
+   "couriers": 227.0,
+   "orders_per_min": 1.6988102821898163,
+   "orders_per_courier_hour": 1.8783317146865222,
+   "top10pct_restaurant_share": 0.37718599601367664,
+   "orders_per_restaurant_sigma_log": 0.994593720600682,
+   "pickup_service_min": 4.0,
+   "dropoff_service_min": 4.0,
+   "target_click_to_door": 40.0
+  }
+ },
+ "world": {
+  "prep_minutes": {
+   "mean": 17.59517383461594,
+   "p50": 14.778678892402581,
+   "p90": 31.492170908877085,
+   "sigma_log": 0.5952687380875173
+  },
+  "restaurant_to_customer_travel_min": {
+   "p50": 7.5,
+   "p90": 15.0
+  },
+  "orders_per_courier_hour": 1.3333333333333333,
+  "top10pct_restaurant_share": 0.27712351632047477,
+  "orders_per_restaurant_sigma_log": 0.8922929640444901,
+  "orders_per_min": 1.1,
+  "n_restaurants": 10
+ }
+}

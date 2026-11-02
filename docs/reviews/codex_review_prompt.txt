@@ -1,0 +1,8 @@
+Run `git show 3a7e506` (and read any surrounding code you need) and review that commit.
+You are reviewing commit 3a7e506 of DeliveryTwin AI, a research simulator (SimPy) where an investigator agent must diagnose a hidden injected fault from telemetry. Focus on correctness, not style. Prioritize, in this order:
+1. Leakage: any path by which the hidden fault family, its parameters, world seed, or raw entity ids could reach the public telemetry (deliverytwin/telemetry/, benchmark/generator.py).
+2. Common-random-numbers / pairing validity (ADR-0002): event-keyed draws must not depend on execution history; same key must not be drawn twice; fork/replay must reproduce the past exactly. Check the new dispatcher logic in deliverytwin/simulation/world.py (error surge vs dependency latency sharing "dispatch_err" keys, SetRetryBackoff, _hang_then_requeue) for key reuse, off-by-one attempt indexing, or divergence between the two worlds.
+3. Simulator invariants: order lifecycle (cancel vs pickup), courier double-assignment, conservation.
+4. Detector/statistics (deliverytwin/diagnostics/detector.py, scripts/calibrate_detector.py, scripts/g21_pair_search.py, scripts/g2_report.py): baseline/cohort windows, calibration on held-out seeds, Wilson CI, cross-validation leakage, any claim in docs/reports/G2_1_REPORT.md not supported by the code or data.
+For each finding give: severity (high/medium/low), file:line, what is wrong, a concrete failure scenario, and a suggested fix. Say explicitly if you found nothing in a category. Do not report style issues.
+You are in a read-only sandbox: do not modify files. Output only the final review.

@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Data and experiment outputs (never commit generated runs or private ground truth)
+runs/
+bundles/
+datasets/generated/
+*.parquet
+*.duckdb
+
+# Models and downloads
+models/
+checkpoints/
+downloads/
+*.safetensors
+*.bin
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# External third-party datasets (never committed; see ADR-0009)
+datasets/external/

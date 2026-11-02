@@ -1,0 +1,1810 @@
+{
+  "g4_l0_l2": {
+    "qwen-base": {
+      "L0": {
+        "n": 20,
+        "exact": 0.05,
+        "ci": [
+          0.009,
+          0.236
+        ],
+        "abstained": 0.9,
+        "wrong_commit": 0.05,
+        "experiments_mean": 1.1,
+        "recommendation_true_world_diff_bad_mean": -0.0021
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.9,
+        "wrong_commit": 0.1,
+        "experiments_mean": 1.5,
+        "recommendation_true_world_diff_bad_mean": 0.0012
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.85,
+        "wrong_commit": 0.15,
+        "experiments_mean": 1.05,
+        "recommendation_true_world_diff_bad_mean": 0.0267
+      }
+    },
+    "qwen-sft": {
+      "L0": {
+        "n": 20,
+        "exact": 0.45,
+        "ci": [
+          0.258,
+          0.658
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.55,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": -0.0771
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.4,
+        "ci": [
+          0.219,
+          0.613
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.6,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": -0.0145
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.9,
+        "ci": [
+          0.699,
+          0.972
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.1,
+        "experiments_mean": 1.7,
+        "recommendation_true_world_diff_bad_mean": -0.154
+      }
+    },
+    "playbook": {
+      "L0": {
+        "n": 20,
+        "exact": 0.5,
+        "ci": [
+          0.299,
+          0.701
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.5,
+        "experiments_mean": 0.05,
+        "recommendation_true_world_diff_bad_mean": -0.0527
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.7,
+        "ci": [
+          0.481,
+          0.855
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.3,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": -0.1616
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.65,
+        "ci": [
+          0.433,
+          0.819
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.35,
+        "experiments_mean": 1.25,
+        "recommendation_true_world_diff_bad_mean": -0.0991
+      }
+    },
+    "rules": {
+      "L0": {
+        "n": 20,
+        "exact": 0.5,
+        "ci": [
+          0.299,
+          0.701
+        ],
+        "abstained": 0.05,
+        "wrong_commit": 0.45,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": -0.0527
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.7,
+        "ci": [
+          0.481,
+          0.855
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.3,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": -0.1616
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.65,
+        "wrong_commit": 0.35,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": 0.0
+      }
+    }
+  },
+  "g4_paired": {
+    "L0": {
+      "sft_vs_base": {
+        "status": "ok",
+        "label": "g4_main_not_preregistered",
+        "n": 20,
+        "only_first": 9,
+        "only_second": 1,
+        "mcnemar_p": 0.0215
+      },
+      "sft_vs_playbook": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 7,
+        "only_second": 8,
+        "mcnemar_p": 1.0
+      },
+      "sft_vs_gpt5mini": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 2,
+        "only_second": 11,
+        "mcnemar_p": 0.0225
+      }
+    },
+    "L1": {
+      "sft_vs_base": {
+        "status": "ok",
+        "label": "g4_main_not_preregistered",
+        "n": 20,
+        "only_first": 8,
+        "only_second": 0,
+        "mcnemar_p": 0.0078
+      },
+      "sft_vs_playbook": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 1,
+        "only_second": 7,
+        "mcnemar_p": 0.0703
+      },
+      "sft_vs_gpt5mini": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 2,
+        "only_second": 9,
+        "mcnemar_p": 0.0654
+      }
+    },
+    "L2": {
+      "sft_vs_base": {
+        "status": "ok",
+        "label": "g4_main_not_preregistered",
+        "n": 20,
+        "only_first": 18,
+        "only_second": 0,
+        "mcnemar_p": 0.0
+      },
+      "sft_vs_playbook": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 6,
+        "only_second": 1,
+        "mcnemar_p": 0.125
+      },
+      "sft_vs_gpt5mini": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 13,
+        "only_second": 1,
+        "mcnemar_p": 0.0018
+      }
+    }
+  },
+  "ladder_l3_l6": {
+    "rules": {
+      "L3": {
+        "n": 20,
+        "exact": 0.35,
+        "ci": [
+          0.181,
+          0.567
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.65,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": -0.106
+      },
+      "L4": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.8,
+        "wrong_commit": 0.2,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": 0.0
+      },
+      "L5": {
+        "n": 20,
+        "exact": 0.3,
+        "ci": [
+          0.145,
+          0.519
+        ],
+        "abstained": 0.4,
+        "wrong_commit": 0.3,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": 0.0
+      },
+      "L6": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.7,
+        "wrong_commit": 0.3,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": 0.0
+      }
+    },
+    "playbook": {
+      "L3": {
+        "n": 20,
+        "exact": 0.35,
+        "ci": [
+          0.181,
+          0.567
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.65,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": -0.106
+      },
+      "L4": {
+        "n": 20,
+        "exact": 0.3,
+        "ci": [
+          0.145,
+          0.519
+        ],
+        "abstained": 0.5,
+        "wrong_commit": 0.2,
+        "experiments_mean": 0.8,
+        "recommendation_true_world_diff_bad_mean": -0.1005
+      },
+      "L5": {
+        "n": 20,
+        "exact": 0.65,
+        "ci": [
+          0.433,
+          0.819
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.35,
+        "experiments_mean": 1.05,
+        "recommendation_true_world_diff_bad_mean": -0.191
+      },
+      "L6": {
+        "n": 20,
+        "exact": 0.5,
+        "ci": [
+          0.299,
+          0.701
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.5,
+        "experiments_mean": 1.45,
+        "recommendation_true_world_diff_bad_mean": -0.0614
+      }
+    },
+    "qwen-base": {
+      "L4": {
+        "n": 20,
+        "exact": 0.1,
+        "ci": [
+          0.028,
+          0.301
+        ],
+        "abstained": 0.85,
+        "wrong_commit": 0.05,
+        "experiments_mean": 0.05,
+        "recommendation_true_world_diff_bad_mean": 0.0036
+      },
+      "L5": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.95,
+        "wrong_commit": 0.05,
+        "experiments_mean": 1.0,
+        "recommendation_true_world_diff_bad_mean": 0.0008
+      },
+      "L6": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.9,
+        "wrong_commit": 0.1,
+        "experiments_mean": 0.75,
+        "recommendation_true_world_diff_bad_mean": -0.0004
+      }
+    },
+    "qwen-sft": {
+      "L4": {
+        "n": 20,
+        "exact": 0.7,
+        "ci": [
+          0.481,
+          0.855
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.3,
+        "experiments_mean": 1.0,
+        "recommendation_true_world_diff_bad_mean": -0.1312
+      },
+      "L5": {
+        "n": 20,
+        "exact": 0.4,
+        "ci": [
+          0.219,
+          0.613
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.6,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": -0.0692
+      },
+      "L6": {
+        "n": 20,
+        "exact": 0.95,
+        "ci": [
+          0.764,
+          0.991
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.05,
+        "experiments_mean": 1.9,
+        "recommendation_true_world_diff_bad_mean": -0.1378
+      }
+    }
+  },
+  "ladder_paired": {
+    "L3": {
+      "playbook_vs_rules": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 0,
+        "only_second": 0,
+        "mcnemar_p": 1.0
+      },
+      "sft_vs_base": {
+        "status": "not_run",
+        "label": "exploratory",
+        "n": 0,
+        "n_first": 0,
+        "n_second": 0,
+        "mcnemar_p": null
+      },
+      "sft_vs_playbook": {
+        "status": "not_run",
+        "label": "exploratory",
+        "n": 0,
+        "n_first": 0,
+        "n_second": 20,
+        "mcnemar_p": null
+      }
+    },
+    "L4": {
+      "playbook_vs_rules": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 6,
+        "only_second": 0,
+        "mcnemar_p": 0.0312
+      },
+      "sft_vs_base": {
+        "status": "ok",
+        "label": "principal",
+        "n": 20,
+        "only_first": 13,
+        "only_second": 1,
+        "mcnemar_p": 0.0018
+      },
+      "sft_vs_playbook": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 8,
+        "only_second": 0,
+        "mcnemar_p": 0.0078
+      }
+    },
+    "L5": {
+      "playbook_vs_rules": {
+        "status": "ok",
+        "label": "principal",
+        "n": 20,
+        "only_first": 7,
+        "only_second": 0,
+        "mcnemar_p": 0.0156
+      },
+      "sft_vs_base": {
+        "status": "ok",
+        "label": "component_of_H2",
+        "n": 20,
+        "only_first": 8,
+        "only_second": 0,
+        "mcnemar_p": 0.0078
+      },
+      "sft_vs_playbook": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 2,
+        "only_second": 7,
+        "mcnemar_p": 0.1797
+      }
+    },
+    "L6": {
+      "playbook_vs_rules": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 10,
+        "only_second": 0,
+        "mcnemar_p": 0.002
+      },
+      "sft_vs_base": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 19,
+        "only_second": 0,
+        "mcnemar_p": 0.0
+      },
+      "sft_vs_playbook": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 9,
+        "only_second": 0,
+        "mcnemar_p": 0.0039
+      }
+    }
+  },
+  "matched_ladder_on_l2_instances": {
+    "L2_mode_A": {
+      "rules": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.65,
+        "wrong_commit": 0.35,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": 0.0
+      },
+      "playbook": {
+        "n": 20,
+        "exact": 0.65,
+        "ci": [
+          0.433,
+          0.819
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.35,
+        "experiments_mean": 1.25,
+        "recommendation_true_world_diff_bad_mean": -0.0991
+      },
+      "qwen-base": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.85,
+        "wrong_commit": 0.15,
+        "experiments_mean": 1.05,
+        "recommendation_true_world_diff_bad_mean": 0.0267
+      },
+      "qwen-sft": {
+        "n": 20,
+        "exact": 0.9,
+        "ci": [
+          0.699,
+          0.972
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.1,
+        "experiments_mean": 1.7,
+        "recommendation_true_world_diff_bad_mean": -0.154
+      }
+    },
+    "L4_budgets": {
+      "rules": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.65,
+        "wrong_commit": 0.35,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": 0.0,
+        "vs_L2_mode_A": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 0,
+          "mcnemar_p": 1.0
+        }
+      },
+      "playbook": {
+        "n": 20,
+        "exact": 0.35,
+        "ci": [
+          0.181,
+          0.567
+        ],
+        "abstained": 0.3,
+        "wrong_commit": 0.35,
+        "experiments_mean": 0.65,
+        "recommendation_true_world_diff_bad_mean": -0.0991,
+        "vs_L2_mode_A": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 6,
+          "mcnemar_p": 0.0312
+        }
+      },
+      "qwen-base": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 1.0,
+        "wrong_commit": 0.0,
+        "experiments_mean": 0.15,
+        "recommendation_true_world_diff_bad_mean": 0.0,
+        "vs_L2_mode_A": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 0,
+          "mcnemar_p": 1.0
+        }
+      },
+      "qwen-sft": {
+        "n": 20,
+        "exact": 0.8,
+        "ci": [
+          0.584,
+          0.919
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.2,
+        "experiments_mean": 1.0,
+        "recommendation_true_world_diff_bad_mean": -0.154,
+        "vs_L2_mode_A": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 2,
+          "mcnemar_p": 0.5
+        }
+      },
+      "paired": {
+        "sft_vs_base": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 16,
+          "only_second": 0,
+          "mcnemar_p": 0.0
+        },
+        "sft_vs_playbook": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 9,
+          "only_second": 0,
+          "mcnemar_p": 0.0039
+        },
+        "playbook_vs_rules": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 7,
+          "only_second": 0,
+          "mcnemar_p": 0.0156
+        }
+      }
+    },
+    "L6_twin_0.25": {
+      "rules": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.65,
+        "wrong_commit": 0.35,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": 0.0,
+        "vs_L2_mode_A": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 0,
+          "mcnemar_p": 1.0
+        }
+      },
+      "playbook": {
+        "n": 20,
+        "exact": 0.45,
+        "ci": [
+          0.258,
+          0.658
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.55,
+        "experiments_mean": 1.5,
+        "recommendation_true_world_diff_bad_mean": -0.0541,
+        "vs_L2_mode_A": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 4,
+          "mcnemar_p": 0.125
+        }
+      },
+      "qwen-base": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.85,
+        "wrong_commit": 0.15,
+        "experiments_mean": 0.8,
+        "recommendation_true_world_diff_bad_mean": 0.0417,
+        "vs_L2_mode_A": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 0,
+          "mcnemar_p": 1.0
+        }
+      },
+      "qwen-sft": {
+        "n": 20,
+        "exact": 0.95,
+        "ci": [
+          0.764,
+          0.991
+        ],
+        "abstained": 0.0,
+        "wrong_commit": 0.05,
+        "experiments_mean": 1.8,
+        "recommendation_true_world_diff_bad_mean": -0.154,
+        "vs_L2_mode_A": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 2,
+          "only_second": 1,
+          "mcnemar_p": 1.0
+        }
+      },
+      "paired": {
+        "sft_vs_base": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 19,
+          "only_second": 0,
+          "mcnemar_p": 0.0
+        },
+        "sft_vs_playbook": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 10,
+          "only_second": 0,
+          "mcnemar_p": 0.002
+        },
+        "playbook_vs_rules": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 9,
+          "only_second": 0,
+          "mcnemar_p": 0.0039
+        }
+      }
+    }
+  },
+  "addendum_a1_api": {
+    "ladder": {
+      "gpt-5-mini": {
+        "L4": {
+          "n": 20,
+          "exact": 0.0,
+          "ci": [
+            -0.0,
+            0.161
+          ],
+          "abstained": 0.35,
+          "wrong_commit": 0.65,
+          "experiments_mean": 1.0,
+          "recommendation_true_world_diff_bad_mean": 0.0615
+        },
+        "L5": {
+          "n": 20,
+          "exact": 0.8,
+          "ci": [
+            0.584,
+            0.919
+          ],
+          "abstained": 0.05,
+          "wrong_commit": 0.15,
+          "experiments_mean": 1.65,
+          "recommendation_true_world_diff_bad_mean": -0.3105
+        },
+        "L6": {
+          "n": 20,
+          "exact": 0.3,
+          "ci": [
+            0.145,
+            0.519
+          ],
+          "abstained": 0.1,
+          "wrong_commit": 0.6,
+          "experiments_mean": 2.35,
+          "recommendation_true_world_diff_bad_mean": 0.0544
+        }
+      },
+      "gpt-5.6-luna": {
+        "L4": {
+          "n": 20,
+          "exact": 0.05,
+          "ci": [
+            0.009,
+            0.236
+          ],
+          "abstained": 0.7,
+          "wrong_commit": 0.25,
+          "experiments_mean": 1.0,
+          "recommendation_true_world_diff_bad_mean": 0.0382
+        },
+        "L5": {
+          "n": 20,
+          "exact": 0.9,
+          "ci": [
+            0.699,
+            0.972
+          ],
+          "abstained": 0.05,
+          "wrong_commit": 0.05,
+          "experiments_mean": 2.3,
+          "recommendation_true_world_diff_bad_mean": -0.3308
+        },
+        "L6": {
+          "n": 20,
+          "exact": 0.15,
+          "ci": [
+            0.052,
+            0.36
+          ],
+          "abstained": 0.55,
+          "wrong_commit": 0.3,
+          "experiments_mean": 2.05,
+          "recommendation_true_world_diff_bad_mean": 0.0193
+        }
+      }
+    },
+    "paired": {
+      "L4": {
+        "gpt-5-mini_vs_qwen-sft": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 14,
+          "mcnemar_p": 0.0001
+        },
+        "gpt-5-mini_vs_playbook": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 6,
+          "mcnemar_p": 0.0312
+        },
+        "gpt-5.6-luna_vs_qwen-sft": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 13,
+          "mcnemar_p": 0.0002
+        },
+        "gpt-5.6-luna_vs_playbook": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 5,
+          "mcnemar_p": 0.0625
+        }
+      },
+      "L5": {
+        "gpt-5-mini_vs_qwen-sft": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 9,
+          "only_second": 1,
+          "mcnemar_p": 0.0215
+        },
+        "gpt-5-mini_vs_playbook": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 5,
+          "only_second": 2,
+          "mcnemar_p": 0.4531
+        },
+        "gpt-5.6-luna_vs_qwen-sft": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 10,
+          "only_second": 0,
+          "mcnemar_p": 0.002
+        },
+        "gpt-5.6-luna_vs_playbook": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 6,
+          "only_second": 1,
+          "mcnemar_p": 0.125
+        }
+      },
+      "L6": {
+        "gpt-5-mini_vs_qwen-sft": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 13,
+          "mcnemar_p": 0.0002
+        },
+        "gpt-5-mini_vs_playbook": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 3,
+          "only_second": 7,
+          "mcnemar_p": 0.3438
+        },
+        "gpt-5.6-luna_vs_qwen-sft": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 0,
+          "only_second": 16,
+          "mcnemar_p": 0.0
+        },
+        "gpt-5.6-luna_vs_playbook": {
+          "status": "ok",
+          "label": "exploratory",
+          "n": 20,
+          "only_first": 1,
+          "only_second": 8,
+          "mcnemar_p": 0.0391
+        }
+      }
+    },
+    "luna_l2_with_vs_without_experiments": {
+      "with": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.6,
+        "wrong_commit": 0.4,
+        "experiments_mean": 1.85,
+        "recommendation_true_world_diff_bad_mean": 0.0282
+      },
+      "without": {
+        "n": 20,
+        "exact": 0.0,
+        "ci": [
+          -0.0,
+          0.161
+        ],
+        "abstained": 0.9,
+        "wrong_commit": 0.1,
+        "experiments_mean": 0.0,
+        "recommendation_true_world_diff_bad_mean": 0.0329
+      },
+      "paired": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 0,
+        "only_second": 0,
+        "mcnemar_p": 1.0
+      }
+    }
+  },
+  "twin_sweep_playbook_l2": {
+    "mode_A": {
+      "n": 20,
+      "exact": 0.65,
+      "ci": [
+        0.433,
+        0.819
+      ],
+      "abstained": 0.0,
+      "wrong_commit": 0.35,
+      "experiments_mean": 1.25,
+      "recommendation_true_world_diff_bad_mean": -0.0991,
+      "vs_mode_A": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 0,
+        "only_second": 0,
+        "mcnemar_p": 1.0
+      }
+    },
+    "delta_0": {
+      "n": 20,
+      "exact": 0.65,
+      "ci": [
+        0.433,
+        0.819
+      ],
+      "abstained": 0.0,
+      "wrong_commit": 0.35,
+      "experiments_mean": 1.25,
+      "recommendation_true_world_diff_bad_mean": -0.0991,
+      "vs_mode_A": {
+        "status": "ok",
+        "label": "principal",
+        "n": 20,
+        "only_first": 0,
+        "only_second": 0,
+        "mcnemar_p": 1.0
+      }
+    },
+    "delta_0.1": {
+      "n": 20,
+      "exact": 0.45,
+      "ci": [
+        0.258,
+        0.658
+      ],
+      "abstained": 0.0,
+      "wrong_commit": 0.55,
+      "experiments_mean": 1.55,
+      "recommendation_true_world_diff_bad_mean": -0.0537,
+      "vs_mode_A": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 0,
+        "only_second": 4,
+        "mcnemar_p": 0.125
+      }
+    },
+    "delta_0.25": {
+      "n": 20,
+      "exact": 0.45,
+      "ci": [
+        0.258,
+        0.658
+      ],
+      "abstained": 0.0,
+      "wrong_commit": 0.55,
+      "experiments_mean": 1.5,
+      "recommendation_true_world_diff_bad_mean": -0.0541,
+      "vs_mode_A": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 0,
+        "only_second": 4,
+        "mcnemar_p": 0.125
+      }
+    },
+    "delta_0.5": {
+      "n": 20,
+      "exact": 0.4,
+      "ci": [
+        0.219,
+        0.613
+      ],
+      "abstained": 0.0,
+      "wrong_commit": 0.6,
+      "experiments_mean": 1.55,
+      "recommendation_true_world_diff_bad_mean": -0.0371,
+      "vs_mode_A": {
+        "status": "ok",
+        "label": "exploratory",
+        "n": 20,
+        "only_first": 0,
+        "only_second": 5,
+        "mcnemar_p": 0.0625
+      }
+    }
+  },
+  "h1_h9_sft_l2": {
+    "with_experiments": {
+      "n": 20,
+      "exact": 0.9,
+      "ci": [
+        0.699,
+        0.972
+      ],
+      "abstained": 0.0,
+      "wrong_commit": 0.1,
+      "experiments_mean": 1.7,
+      "recommendation_true_world_diff_bad_mean": -0.154
+    },
+    "without_experiments": {
+      "n": 20,
+      "exact": 0.45,
+      "ci": [
+        0.258,
+        0.658
+      ],
+      "abstained": 0.0,
+      "wrong_commit": 0.55,
+      "experiments_mean": 0.0,
+      "recommendation_true_world_diff_bad_mean": -0.1431
+    },
+    "paired": {
+      "status": "ok",
+      "label": "principal",
+      "n": 20,
+      "only_first": 11,
+      "only_second": 2,
+      "mcnemar_p": 0.0225
+    },
+    "condition": "experiment tool removed from schema and dispatcher; query budget unchanged (25)"
+  },
+  "g5_interventions": {
+    "n_incidents": 60,
+    "replicas": 20,
+    "menu": [
+      "add_couriers_5",
+      "add_couriers_10",
+      "workers_4",
+      "workers_6",
+      "retry_backoff_0.2",
+      "policy_eta_aware",
+      "admission_0.9",
+      "admission_0.8"
+    ],
+    "generation_failures": [],
+    "complete": true,
+    "effects_by_family": {
+      "courier_scarcity": {
+        "n": 12,
+        "add_couriers_5": {
+          "diff_bad": -0.1162,
+          "ci": [
+            -0.1353,
+            -0.0971
+          ],
+          "diff_rejected": 0.0
+        },
+        "add_couriers_10": {
+          "diff_bad": -0.243,
+          "ci": [
+            -0.2778,
+            -0.2081
+          ],
+          "diff_rejected": 0.0
+        },
+        "workers_4": {
+          "diff_bad": -0.0038,
+          "ci": [
+            -0.0107,
+            0.0031
+          ],
+          "diff_rejected": 0.0
+        },
+        "workers_6": {
+          "diff_bad": -0.0099,
+          "ci": [
+            -0.0168,
+            -0.0029
+          ],
+          "diff_rejected": 0.0
+        },
+        "retry_backoff_0.2": {
+          "diff_bad": -0.0018,
+          "ci": [
+            -0.0069,
+            0.0033
+          ],
+          "diff_rejected": 0.0
+        },
+        "policy_eta_aware": {
+          "diff_bad": 0.0012,
+          "ci": [
+            0.0,
+            0.0025
+          ],
+          "diff_rejected": 0.0
+        },
+        "admission_0.9": {
+          "diff_bad": -0.0045,
+          "ci": [
+            -0.0102,
+            0.0012
+          ],
+          "diff_rejected": 0.0996
+        },
+        "admission_0.8": {
+          "diff_bad": -0.0011,
+          "ci": [
+            -0.0106,
+            0.0084
+          ],
+          "diff_rejected": 0.2006
+        },
+        "placebo": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.0
+        }
+      },
+      "dispatch_error_surge": {
+        "n": 11,
+        "add_couriers_5": {
+          "diff_bad": -0.004,
+          "ci": [
+            -0.006,
+            -0.0021
+          ],
+          "diff_rejected": 0.0
+        },
+        "add_couriers_10": {
+          "diff_bad": -0.0067,
+          "ci": [
+            -0.0086,
+            -0.0048
+          ],
+          "diff_rejected": 0.0
+        },
+        "workers_4": {
+          "diff_bad": -0.0018,
+          "ci": [
+            -0.0029,
+            -0.0007
+          ],
+          "diff_rejected": 0.0
+        },
+        "workers_6": {
+          "diff_bad": -0.0018,
+          "ci": [
+            -0.0028,
+            -0.0008
+          ],
+          "diff_rejected": 0.0
+        },
+        "retry_backoff_0.2": {
+          "diff_bad": -0.2889,
+          "ci": [
+            -0.3419,
+            -0.2358
+          ],
+          "diff_rejected": 0.0
+        },
+        "policy_eta_aware": {
+          "diff_bad": -0.0095,
+          "ci": [
+            -0.0116,
+            -0.0073
+          ],
+          "diff_rejected": 0.0
+        },
+        "admission_0.9": {
+          "diff_bad": 0.0524,
+          "ci": [
+            0.0466,
+            0.0582
+          ],
+          "diff_rejected": 0.0995
+        },
+        "admission_0.8": {
+          "diff_bad": 0.1098,
+          "ci": [
+            0.0969,
+            0.1227
+          ],
+          "diff_rejected": 0.1986
+        },
+        "placebo": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.0
+        }
+      },
+      "dispatch_latency": {
+        "n": 9,
+        "add_couriers_5": {
+          "diff_bad": -0.0028,
+          "ci": [
+            -0.0041,
+            -0.0014
+          ],
+          "diff_rejected": 0.0
+        },
+        "add_couriers_10": {
+          "diff_bad": -0.0051,
+          "ci": [
+            -0.0074,
+            -0.0027
+          ],
+          "diff_rejected": 0.0
+        },
+        "workers_4": {
+          "diff_bad": 0.0001,
+          "ci": [
+            -0.0001,
+            0.0003
+          ],
+          "diff_rejected": 0.0
+        },
+        "workers_6": {
+          "diff_bad": 0.0001,
+          "ci": [
+            -0.0001,
+            0.0003
+          ],
+          "diff_rejected": 0.0
+        },
+        "retry_backoff_0.2": {
+          "diff_bad": 0.0,
+          "ci": [
+            -0.0001,
+            0.0002
+          ],
+          "diff_rejected": 0.0
+        },
+        "policy_eta_aware": {
+          "diff_bad": -0.0083,
+          "ci": [
+            -0.0111,
+            -0.0055
+          ],
+          "diff_rejected": 0.0
+        },
+        "admission_0.9": {
+          "diff_bad": 0.0546,
+          "ci": [
+            0.0495,
+            0.0598
+          ],
+          "diff_rejected": 0.0994
+        },
+        "admission_0.8": {
+          "diff_bad": 0.1072,
+          "ci": [
+            0.0974,
+            0.1169
+          ],
+          "diff_rejected": 0.1943
+        },
+        "placebo": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.0
+        }
+      },
+      "dispatcher_saturation": {
+        "n": 10,
+        "add_couriers_5": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.0
+        },
+        "add_couriers_10": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.0
+        },
+        "workers_4": {
+          "diff_bad": -0.2177,
+          "ci": [
+            -0.423,
+            -0.0124
+          ],
+          "diff_rejected": 0.0
+        },
+        "workers_6": {
+          "diff_bad": -0.7679,
+          "ci": [
+            -0.8719,
+            -0.6639
+          ],
+          "diff_rejected": 0.0
+        },
+        "retry_backoff_0.2": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.0
+        },
+        "policy_eta_aware": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.0
+        },
+        "admission_0.9": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.0977
+        },
+        "admission_0.8": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.1994
+        },
+        "placebo": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.0
+        }
+      },
+      "restaurant_bottleneck": {
+        "n": 18,
+        "add_couriers_5": {
+          "diff_bad": -0.0252,
+          "ci": [
+            -0.0343,
+            -0.0162
+          ],
+          "diff_rejected": 0.0
+        },
+        "add_couriers_10": {
+          "diff_bad": -0.0376,
+          "ci": [
+            -0.052,
+            -0.0232
+          ],
+          "diff_rejected": 0.0
+        },
+        "workers_4": {
+          "diff_bad": 0.0019,
+          "ci": [
+            0.0003,
+            0.0036
+          ],
+          "diff_rejected": 0.0
+        },
+        "workers_6": {
+          "diff_bad": 0.0043,
+          "ci": [
+            0.002,
+            0.0066
+          ],
+          "diff_rejected": 0.0
+        },
+        "retry_backoff_0.2": {
+          "diff_bad": 0.0003,
+          "ci": [
+            -0.0024,
+            0.0031
+          ],
+          "diff_rejected": 0.0
+        },
+        "policy_eta_aware": {
+          "diff_bad": 0.0029,
+          "ci": [
+            0.0002,
+            0.0057
+          ],
+          "diff_rejected": 0.0
+        },
+        "admission_0.9": {
+          "diff_bad": 0.0433,
+          "ci": [
+            0.0318,
+            0.0549
+          ],
+          "diff_rejected": 0.0992
+        },
+        "admission_0.8": {
+          "diff_bad": 0.1018,
+          "ci": [
+            0.0824,
+            0.1212
+          ],
+          "diff_rejected": 0.2002
+        },
+        "placebo": {
+          "diff_bad": 0.0,
+          "ci": [
+            0.0,
+            0.0
+          ],
+          "diff_rejected": 0.0
+        }
+      }
+    },
+    "best_action_counts_by_family": {
+      "courier_scarcity": {
+        "add_couriers_10": 12
+      },
+      "dispatcher_saturation": {
+        "workers_6": 10
+      },
+      "restaurant_bottleneck": {
+        "add_couriers_10": 18
+      },
+      "dispatch_latency": {
+        "policy_eta_aware": 7,
+        "add_couriers_10": 2
+      },
+      "dispatch_error_surge": {
+        "retry_backoff_0.2": 11
+      }
+    },
+    "regret_vs_best": {
+      "remedy": {
+        "n": 60,
+        "mean": 0.0126,
+        "median": 0.0,
+        "share_within_0.02": 0.8
+      },
+      "playbook": {
+        "n": 60,
+        "mean": 0.1377,
+        "median": 0.0203,
+        "share_within_0.02": 0.5
+      },
+      "gpt-5-mini": {
+        "n": 41,
+        "mean": 0.0546,
+        "median": 0.0,
+        "share_within_0.02": 0.659
+      },
+      "gpt-5.6-luna": {
+        "n": 52,
+        "mean": 0.1109,
+        "median": 0.0063,
+        "share_within_0.02": 0.558
+      },
+      "qwen-sft": {
+        "n": 60,
+        "mean": 0.1591,
+        "median": 0.0085,
+        "share_within_0.02": 0.617
+      },
+      "qwen-base": {
+        "n": 60,
+        "mean": 0.2504,
+        "median": 0.1694,
+        "share_within_0.02": 0.25
+      }
+    },
+    "regret_vs_common_oracle": {
+      "remedy": {
+        "n": 60,
+        "mean": 0.0434,
+        "median": 0.0095,
+        "share_within_0.02": 0.617
+      },
+      "playbook": {
+        "n": 60,
+        "mean": 0.1685,
+        "median": 0.0303,
+        "share_within_0.02": 0.433
+      },
+      "gpt-5-mini": {
+        "n": 41,
+        "mean": 0.0563,
+        "median": 0.0,
+        "share_within_0.02": 0.659
+      },
+      "gpt-5.6-luna": {
+        "n": 52,
+        "mean": 0.1267,
+        "median": 0.0222,
+        "share_within_0.02": 0.5
+      },
+      "qwen-sft": {
+        "n": 60,
+        "mean": 0.1899,
+        "median": 0.0117,
+        "share_within_0.02": 0.567
+      },
+      "qwen-base": {
+        "n": 60,
+        "mean": 0.2812,
+        "median": 0.203,
+        "share_within_0.02": 0.25
+      }
+    },
+    "agent_coverage": {
+      "playbook": {
+        "by_level": {
+          "L0": 20,
+          "L1": 20,
+          "L2": 20
+        },
+        "complete": true,
+        "infeasible_recommendations": 0
+      },
+      "gpt-5-mini": {
+        "by_level": {
+          "L0": 20,
+          "L1": 20,
+          "L2": 20
+        },
+        "complete": true,
+        "infeasible_recommendations": 19
+      },
+      "gpt-5.6-luna": {
+        "by_level": {
+          "L0": 20,
+          "L1": 20,
+          "L2": 20
+        },
+        "complete": true,
+        "infeasible_recommendations": 8
+      },
+      "qwen-sft": {
+        "by_level": {
+          "L0": 20,
+          "L1": 20,
+          "L2": 20
+        },
+        "complete": true,
+        "infeasible_recommendations": 0
+      },
+      "qwen-base": {
+        "by_level": {
+          "L0": 20,
+          "L1": 20,
+          "L2": 20
+        },
+        "complete": true,
+        "infeasible_recommendations": 0
+      }
+    },
+    "variance_ratio_paired_over_unpaired": {
+      "add_couriers_5": {
+        "n": 50,
+        "median": 0.058,
+        "q25": 0.0147,
+        "q75": 0.1814,
+        "share_below_1": 0.96
+      },
+      "add_couriers_10": {
+        "n": 50,
+        "median": 0.1092,
+        "q25": 0.0275,
+        "q75": 0.2666,
+        "share_below_1": 1.0
+      },
+      "workers_4": {
+        "n": 59,
+        "median": 0.0561,
+        "q25": 0.01,
+        "q75": 0.5541,
+        "share_below_1": 0.831
+      },
+      "workers_6": {
+        "n": 60,
+        "median": 0.0569,
+        "q25": 0.01,
+        "q75": 0.5769,
+        "share_below_1": 0.8
+      },
+      "retry_backoff_0.2": {
+        "n": 50,
+        "median": 0.1134,
+        "q25": 0.0149,
+        "q75": 0.4672,
+        "share_below_1": 0.96
+      },
+      "policy_eta_aware": {
+        "n": 50,
+        "median": 0.0284,
+        "q25": 0.0194,
+        "q75": 0.0513,
+        "share_below_1": 1.0
+      },
+      "admission_0.9": {
+        "n": 50,
+        "median": 0.1798,
+        "q25": 0.1239,
+        "q75": 0.2866,
+        "share_below_1": 0.96
+      },
+      "admission_0.8": {
+        "n": 50,
+        "median": 0.2972,
+        "q25": 0.2117,
+        "q75": 0.5387,
+        "share_below_1": 0.94
+      }
+    },
+    "placebo_all_exactly_zero": true,
+    "mean_pareto_size": 2.82
+  },
+  "g5_names_only": {
+    "train_n": 300,
+    "test_n": 60,
+    "per_level": {
+      "L0": {
+        "n_train": 100,
+        "n_test": 20,
+        "names_only_correct": 4,
+        "names_only_acc": 0.2,
+        "ci": [
+          0.081,
+          0.416
+        ],
+        "majority_correct": 3,
+        "majority_acc": 0.15,
+        "label": "principal",
+        "within_prediction": true
+      },
+      "L1": {
+        "n_train": 100,
+        "n_test": 20,
+        "names_only_correct": 8,
+        "names_only_acc": 0.4,
+        "ci": [
+          0.219,
+          0.613
+        ],
+        "majority_correct": 10,
+        "majority_acc": 0.5,
+        "label": "principal",
+        "within_prediction": true
+      },
+      "L2": {
+        "n_train": 100,
+        "n_test": 20,
+        "names_only_correct": 9,
+        "names_only_acc": 0.45,
+        "ci": [
+          0.258,
+          0.658
+        ],
+        "majority_correct": 9,
+        "majority_acc": 0.45,
+        "label": "principal",
+        "within_prediction": true
+      }
+    }
+  },
+  "g4_general_check": {
+    "benchmark": "GSM8K test (openai/grade-school-math, MIT), fixed random subset, seed 0",
+    "n": 150,
+    "decoding": "greedy, non-thinking, max_new_tokens=512",
+    "base_acc": 0.6067,
+    "sft_acc": 0.14,
+    "base_only_correct": 79,
+    "sft_only_correct": 9,
+    "mcnemar_p": 0.0,
+    "minutes": 19.8,
+    "no_parsable_answer": {
+      "base": 19,
+      "sft": 116
+    },
+    "diagnostic_last_number": {
+      "label": "exploratory, defined after the run",
+      "rule": "last number in the response, $ and commas stripped",
+      "base_correct": 101,
+      "sft_correct": 67,
+      "base_only": 52,
+      "sft_only": 18,
+      "mcnemar_p": 0.0001,
+      "sft_unparsable_but_last_number_right": 46
+    }
+  }
+}

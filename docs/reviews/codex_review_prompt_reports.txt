@@ -1,0 +1,17 @@
+You are an independent reviewer of a research repository (DeliveryTwin AI: simulated last-mile delivery world, hidden injected faults, investigator agents, counterfactual lab). Do NOT read .env or anything under runs/llm_ledger*. Work read-only.
+
+Review the claims in these documents against the data and code that produced them:
+- docs/reports/G4_REPORT.md, docs/reports/G5_REPORT.md, docs/model/MODEL_CARD.md
+- README.md, docs/LIMITATIONS.md, docs/DATASET_CARD.md
+- docs/methods/PREREG_G5.md (registered before the runs; check that the report's verdicts on each prediction follow the registered wording, without reinterpretation)
+Data: docs/reports/G5_REPORT_DATA.json, G5_INTERVENTIONS.json, G5_NAMES_ONLY.json, G4_GENERAL_CHECK.json, runs/g3/*/results.jsonl, runs/g5/interventions_rows.json. Code: scripts/g5_report.py, scripts/g5_interventions.py, scripts/g4_general_check.py, scripts/demo.py, deliverytwin/.
+
+Look for:
+1. Any number in the documents that does not match the data (recompute where cheap).
+2. Verdicts on pre-registered predictions that are wrong, too generous, or reinterpret the registered criterion.
+3. Causal or general claims the evidence does not support (n = 20 per level; no multiplicity correction).
+4. Statistics errors (McNemar, Wilson, variance ratio, regret definition, feasibility).
+5. Leakage risk in the demo or in what the docs disclose (e.g. sealed seeds).
+6. Section 6 of G5_REPORT is intentionally pending (paid API runs still executing); ignore that.
+
+Output: a numbered list of findings, each with severity (High/Medium/Low), file:line, the claim, what the data says, and a suggested fix. Say explicitly if a claim checks out when you verified it. Be concrete; no generic advice.

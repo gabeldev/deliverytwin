@@ -1,0 +1,479 @@
+{
+  "world_config": {
+    "grid_size": 12,
+    "n_zones": 3,
+    "minutes_per_block": 1.5,
+    "travel_noise_sigma": 0.25,
+    "n_restaurants": 10,
+    "kitchen_capacity": 2,
+    "kitchen_target_utilization": 0.6,
+    "restaurant_popularity_sigma": 1.0,
+    "prep_mean_minutes": 15.0,
+    "prep_sigma": 0.6,
+    "pickup_service_minutes": 4.0,
+    "dropoff_service_minutes": 4.0,
+    "n_couriers": 56,
+    "courier_shift_availability": 0.9,
+    "courier_accept_prob": 0.85,
+    "accept_key_mode": "slot",
+    "dispatcher_workers": 2,
+    "dispatch_service_minutes": 0.3,
+    "dispatch_error_prob": 0.01,
+    "dispatch_retry_minutes": 1.0,
+    "dispatch_policy": "nearest",
+    "admission_rate": 1.0,
+    "customer_patience_floor_minutes": 50.0,
+    "customer_patience_mean_minutes": 30.0,
+    "promised_delivery_minutes": 55.0,
+    "demand": [
+      {
+        "zone": 0,
+        "orders_per_minute": 0.35
+      },
+      {
+        "zone": 1,
+        "orders_per_minute": 0.45
+      },
+      {
+        "zone": 2,
+        "orders_per_minute": 0.3
+      }
+    ],
+    "horizon_minutes": 360,
+    "day": 0
+  },
+  "detector": {
+    "thr_global": 0.16891891891891891,
+    "thr_local": 0.7
+  },
+  "fault_effects": {
+    "courier_scarcity": {
+      "bad_rate": {
+        "mean": 0.3101,
+        "ci95": [
+          0.2703,
+          0.35
+        ],
+        "n": 40
+      },
+      "penalized_time": {
+        "mean": 25.0534,
+        "ci95": [
+          21.4861,
+          28.6207
+        ],
+        "n": 40
+      }
+    },
+    "dispatcher_saturation": {
+      "bad_rate": {
+        "mean": 0.0357,
+        "ci95": [
+          0.0194,
+          0.052
+        ],
+        "n": 40
+      },
+      "penalized_time": {
+        "mean": 4.5334,
+        "ci95": [
+          3.6964,
+          5.3704
+        ],
+        "n": 40
+      }
+    },
+    "restaurant_bottleneck": {
+      "bad_rate": {
+        "mean": 0.0431,
+        "ci95": [
+          0.0284,
+          0.0578
+        ],
+        "n": 40
+      },
+      "penalized_time": {
+        "mean": 4.0309,
+        "ci95": [
+          2.6038,
+          5.458
+        ],
+        "n": 40
+      }
+    },
+    "dispatch_error_surge": {
+      "bad_rate": {
+        "mean": 0.2674,
+        "ci95": [
+          0.2522,
+          0.2825
+        ],
+        "n": 40
+      },
+      "penalized_time": {
+        "mean": 19.8426,
+        "ci95": [
+          18.7648,
+          20.9203
+        ],
+        "n": 40
+      }
+    },
+    "dispatch_latency": {
+      "bad_rate": {
+        "mean": 0.2675,
+        "ci95": [
+          0.252,
+          0.2829
+        ],
+        "n": 40
+      },
+      "penalized_time": {
+        "mean": 19.7709,
+        "ci95": [
+          18.6984,
+          20.8433
+        ],
+        "n": 40
+      }
+    }
+  },
+  "detection_power": {
+    "courier_scarcity": {
+      "outcomes": {
+        "detected": 55,
+        "not_detected": 5
+      },
+      "detection_rate": 0.917,
+      "wilson95": [
+        0.8193,
+        0.9639
+      ],
+      "delay_median": 96.16652912906991,
+      "delay_iqr": [
+        81.95496017154369,
+        107.84342618884418
+      ]
+    },
+    "dispatcher_saturation": {
+      "outcomes": {
+        "detected": 60
+      },
+      "detection_rate": 1.0,
+      "wilson95": [
+        0.9398,
+        1.0
+      ],
+      "delay_median": 104.70045691211816,
+      "delay_iqr": [
+        97.31561765675885,
+        115.74790982625231
+      ]
+    },
+    "restaurant_bottleneck": {
+      "outcomes": {
+        "detected": 26,
+        "not_detected": 34
+      },
+      "detection_rate": 0.433,
+      "wilson95": [
+        0.3157,
+        0.559
+      ],
+      "delay_median": 107.61645696039689,
+      "delay_iqr": [
+        87.7997360942509,
+        126.37356969318441
+      ]
+    },
+    "dispatch_error_surge": {
+      "outcomes": {
+        "detected": 52,
+        "not_detected": 8
+      },
+      "detection_rate": 0.867,
+      "wilson95": [
+        0.7583,
+        0.9309
+      ],
+      "delay_median": 87.42031411025245,
+      "delay_iqr": [
+        79.5622488639383,
+        102.05206589750368
+      ]
+    },
+    "dispatch_latency": {
+      "outcomes": {
+        "detected": 49,
+        "not_detected": 11
+      },
+      "detection_rate": 0.817,
+      "wilson95": [
+        0.7008,
+        0.8944
+      ],
+      "delay_median": 90.35271567270081,
+      "delay_iqr": [
+        79.39287082812214,
+        105.30063224561559
+      ]
+    }
+  },
+  "levels": {
+    "L0": {
+      "n": 60,
+      "families": {
+        "courier_scarcity": 16,
+        "restaurant_bottleneck": 28,
+        "dispatcher_saturation": 16
+      },
+      "attempts_mean": 1.92,
+      "detect_delay_median": 90.21331235792744,
+      "accuracy": {
+        "rules": {
+          "rate": 0.75,
+          "wilson95": [
+            0.6277,
+            0.8422
+          ]
+        },
+        "rules_family": {
+          "rate": 0.75,
+          "wilson95": [
+            0.6277,
+            0.8422
+          ]
+        },
+        "majority_family": {
+          "rate": 0.267,
+          "wilson95": [
+            0.1713,
+            0.3901
+          ]
+        },
+        "random_family": {
+          "rate": 0.333,
+          "wilson95": [
+            0.2273,
+            0.4594
+          ]
+        }
+      },
+      "rules_unresolved_on_pair": {
+        "rate": 0.0
+      },
+      "leaks_found": 0,
+      "majority_family_train": "dispatcher_saturation",
+      "evaluation_master_seed": 909090,
+      "scored_on": "held-out evaluation set (fresh master seed)"
+    },
+    "L1": {
+      "n": 60,
+      "families": {
+        "courier_scarcity": 24,
+        "dispatcher_saturation": 21,
+        "restaurant_bottleneck": 15
+      },
+      "attempts_mean": 1.53,
+      "detect_delay_median": 91.16843262547394,
+      "accuracy": {
+        "rules": {
+          "rate": 0.55,
+          "wilson95": [
+            0.4249,
+            0.6691
+          ]
+        },
+        "rules_family": {
+          "rate": 0.55,
+          "wilson95": [
+            0.4249,
+            0.6691
+          ]
+        },
+        "majority_family": {
+          "rate": 0.25,
+          "wilson95": [
+            0.1578,
+            0.3723
+          ]
+        },
+        "random_family": {
+          "rate": 0.417,
+          "wilson95": [
+            0.3006,
+            0.5427
+          ]
+        }
+      },
+      "rules_unresolved_on_pair": {
+        "rate": 0.0
+      },
+      "leaks_found": 0,
+      "majority_family_train": "restaurant_bottleneck",
+      "evaluation_master_seed": 909090,
+      "scored_on": "held-out evaluation set (fresh master seed)"
+    },
+    "L2": {
+      "n": 60,
+      "families": {
+        "dispatch_latency": 33,
+        "dispatch_error_surge": 27
+      },
+      "attempts_mean": 1.53,
+      "detect_delay_median": 83.84124459351757,
+      "accuracy": {
+        "rules": {
+          "rate": 0.0,
+          "wilson95": [
+            -0.0,
+            0.0602
+          ]
+        },
+        "rules_family": {
+          "rate": 0.0,
+          "wilson95": [
+            -0.0,
+            0.0602
+          ]
+        },
+        "majority_family": {
+          "rate": 0.55,
+          "wilson95": [
+            0.4249,
+            0.6691
+          ]
+        },
+        "random_family": {
+          "rate": 0.533,
+          "wilson95": [
+            0.4089,
+            0.6537
+          ]
+        }
+      },
+      "rules_unresolved_on_pair": {
+        "rate": 0.75
+      },
+      "leaks_found": 0,
+      "majority_family_train": "dispatch_latency",
+      "evaluation_master_seed": 909090,
+      "scored_on": "held-out evaluation set (fresh master seed)"
+    }
+  },
+  "probe": {
+    "L2_pair": {
+      "customer": {
+        "n": 120,
+        "positives": 55,
+        "logreg_acc": [
+          0.567,
+          0.073
+        ],
+        "gboost_acc": [
+          0.483,
+          0.162
+        ],
+        "chance": 0.542
+      },
+      "full": {
+        "n": 120,
+        "positives": 55,
+        "logreg_acc": [
+          0.608,
+          0.042
+        ],
+        "gboost_acc": [
+          0.708,
+          0.075
+        ],
+        "chance": 0.542
+      }
+    },
+    "L1_scarcity_vs_saturation": {
+      "customer": {
+        "n": 76,
+        "positives": 37,
+        "logreg_acc": [
+          0.922,
+          0.061
+        ],
+        "gboost_acc": [
+          0.896,
+          0.065
+        ],
+        "chance": 0.513
+      },
+      "full": {
+        "n": 76,
+        "positives": 37,
+        "logreg_acc": [
+          1.0,
+          0.0
+        ],
+        "gboost_acc": [
+          1.0,
+          0.0
+        ],
+        "chance": 0.513
+      }
+    }
+  },
+  "key_sensitivity": {
+    "slot": {
+      "add_couriers_5": {
+        "effect": {
+          "mean": -0.2402,
+          "ci95": [
+            -0.315,
+            -0.1653
+          ],
+          "n": 40
+        },
+        "var_ratio": 0.007
+      },
+      "policy_eta_aware": {
+        "effect": {
+          "mean": 2.1121,
+          "ci95": [
+            1.8722,
+            2.352
+          ],
+          "n": 40
+        },
+        "var_ratio": 0.0724
+      }
+    },
+    "dyad": {
+      "add_couriers_5": {
+        "effect": {
+          "mean": -0.2676,
+          "ci95": [
+            -0.3454,
+            -0.1897
+          ],
+          "n": 40
+        },
+        "var_ratio": 0.0077
+      },
+      "policy_eta_aware": {
+        "effect": {
+          "mean": 2.0668,
+          "ci95": [
+            1.832,
+            2.3017
+          ],
+          "n": 40
+        },
+        "var_ratio": 0.0706
+      }
+    }
+  },
+  "leak_mutation": {
+    "clean_payload_hits": [],
+    "planted_payload_hits": [
+      "courier_scarcity",
+      "\\br\\d{3}\\b"
+    ]
+  }
+}

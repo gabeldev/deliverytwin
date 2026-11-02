@@ -1,0 +1,639 @@
+{
+  "summary": {
+    "llm-gpt-5-mini_final_fix": {
+      "L0": {
+        "n": 20,
+        "exact": 0.9,
+        "exact_wilson95": [
+          0.699,
+          0.972
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.1,
+        "path_f1": 0.46,
+        "experiments": 1.5,
+        "brier_committed": 0.075,
+        "coverage": 1.0
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.75,
+        "exact_wilson95": [
+          0.531,
+          0.888
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.25,
+        "path_f1": 0.361,
+        "experiments": 1.85,
+        "brier_committed": 0.16,
+        "coverage": 1.0
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.3,
+        "exact_wilson95": [
+          0.145,
+          0.519
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.7,
+        "path_f1": 0.191,
+        "experiments": 2.3,
+        "brier_committed": 0.439,
+        "coverage": 1.0
+      },
+      "usd_total": 0.3028,
+      "usd_per_episode": 0.00505
+    },
+    "llm-gpt-5-mini_final_r1": {
+      "L0": {
+        "n": 20,
+        "exact": 0.9,
+        "exact_wilson95": [
+          0.699,
+          0.972
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.1,
+        "path_f1": 0.447,
+        "experiments": 1.4,
+        "brier_committed": 0.088,
+        "coverage": 1.0
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.8,
+        "exact_wilson95": [
+          0.584,
+          0.919
+        ],
+        "abstained_with_truth": 0.05,
+        "wrong_commit": 0.15,
+        "path_f1": 0.365,
+        "experiments": 1.55,
+        "brier_committed": 0.137,
+        "coverage": 0.95
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.25,
+        "exact_wilson95": [
+          0.112,
+          0.469
+        ],
+        "abstained_with_truth": 0.15,
+        "wrong_commit": 0.6,
+        "path_f1": 0.254,
+        "experiments": 2.1,
+        "brier_committed": 0.413,
+        "coverage": 0.85
+      },
+      "usd_total": 0.2925,
+      "usd_per_episode": 0.00487
+    },
+    "llm-gpt-5-mini_final_r2": {
+      "L0": {
+        "n": 20,
+        "exact": 0.8,
+        "exact_wilson95": [
+          0.584,
+          0.919
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.2,
+        "path_f1": 0.359,
+        "experiments": 1.3,
+        "brier_committed": 0.15,
+        "coverage": 1.0
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.8,
+        "exact_wilson95": [
+          0.584,
+          0.919
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.2,
+        "path_f1": 0.36,
+        "experiments": 1.15,
+        "brier_committed": 0.15,
+        "coverage": 1.0
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.0,
+        "exact_wilson95": [
+          -0.0,
+          0.161
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 1.0,
+        "path_f1": 0.129,
+        "experiments": 1.7,
+        "brier_committed": 0.637,
+        "coverage": 1.0
+      },
+      "usd_total": 0.2449,
+      "usd_per_episode": 0.00408
+    },
+    "llm-gpt-5-nano_final_fix": {
+      "L0": {
+        "n": 20,
+        "exact": 0.25,
+        "exact_wilson95": [
+          0.112,
+          0.469
+        ],
+        "abstained_with_truth": 0.05,
+        "wrong_commit": 0.45,
+        "path_f1": 0.075,
+        "experiments": 1.35,
+        "brier_committed": 0.169,
+        "coverage": 0.7
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.4,
+        "exact_wilson95": [
+          0.219,
+          0.613
+        ],
+        "abstained_with_truth": 0.05,
+        "wrong_commit": 0.55,
+        "path_f1": 0.039,
+        "experiments": 1.25,
+        "brier_committed": 0.33,
+        "coverage": 0.95
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.1,
+        "exact_wilson95": [
+          0.028,
+          0.301
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.85,
+        "path_f1": 0.01,
+        "experiments": 1.55,
+        "brier_committed": 0.326,
+        "coverage": 0.95
+      },
+      "usd_total": 0.0669,
+      "usd_per_episode": 0.00111
+    },
+    "llm-gpt-5-nano_final_r1": {
+      "L0": {
+        "n": 20,
+        "exact": 0.2,
+        "exact_wilson95": [
+          0.081,
+          0.416
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.8,
+        "path_f1": 0.036,
+        "experiments": 1.15,
+        "brier_committed": 0.334,
+        "coverage": 1.0
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.45,
+        "exact_wilson95": [
+          0.258,
+          0.658
+        ],
+        "abstained_with_truth": 0.05,
+        "wrong_commit": 0.5,
+        "path_f1": 0.097,
+        "experiments": 1.2,
+        "brier_committed": 0.233,
+        "coverage": 0.95
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.0,
+        "exact_wilson95": [
+          -0.0,
+          0.161
+        ],
+        "abstained_with_truth": 0.1,
+        "wrong_commit": 0.75,
+        "path_f1": 0.0,
+        "experiments": 1.4,
+        "brier_committed": 0.291,
+        "coverage": 0.75
+      },
+      "usd_total": 0.0573,
+      "usd_per_episode": 0.00095
+    },
+    "llm-gpt-5.6-luna_final_fix": {
+      "L0": {
+        "n": 20,
+        "exact": 0.8,
+        "exact_wilson95": [
+          0.584,
+          0.919
+        ],
+        "abstained_with_truth": 0.1,
+        "wrong_commit": 0.1,
+        "path_f1": 0.391,
+        "experiments": 2.0,
+        "brier_committed": 0.084,
+        "coverage": 0.9
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.75,
+        "exact_wilson95": [
+          0.531,
+          0.888
+        ],
+        "abstained_with_truth": 0.05,
+        "wrong_commit": 0.2,
+        "path_f1": 0.34,
+        "experiments": 2.05,
+        "brier_committed": 0.188,
+        "coverage": 0.95
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.0,
+        "exact_wilson95": [
+          -0.0,
+          0.161
+        ],
+        "abstained_with_truth": 0.6,
+        "wrong_commit": 0.4,
+        "path_f1": 0.233,
+        "experiments": 1.85,
+        "brier_committed": 0.424,
+        "coverage": 0.4
+      },
+      "usd_total": 0.1065,
+      "usd_per_episode": 0.00177
+    },
+    "llm-gpt-5.6-luna_final_r1": {
+      "L0": {
+        "n": 20,
+        "exact": 0.8,
+        "exact_wilson95": [
+          0.584,
+          0.919
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.2,
+        "path_f1": 0.411,
+        "experiments": 2.1,
+        "brier_committed": 0.161,
+        "coverage": 1.0
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.6,
+        "exact_wilson95": [
+          0.387,
+          0.781
+        ],
+        "abstained_with_truth": 0.1,
+        "wrong_commit": 0.3,
+        "path_f1": 0.286,
+        "experiments": 2.15,
+        "brier_committed": 0.27,
+        "coverage": 0.9
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.2,
+        "exact_wilson95": [
+          0.081,
+          0.416
+        ],
+        "abstained_with_truth": 0.35,
+        "wrong_commit": 0.4,
+        "path_f1": 0.246,
+        "experiments": 1.85,
+        "brier_committed": 0.332,
+        "coverage": 0.6
+      },
+      "usd_total": 0.1077,
+      "usd_per_episode": 0.0018
+    },
+    "llm-gpt-5.6-luna_final_r2": {
+      "L0": {
+        "n": 20,
+        "exact": 0.8,
+        "exact_wilson95": [
+          0.584,
+          0.919
+        ],
+        "abstained_with_truth": 0.05,
+        "wrong_commit": 0.15,
+        "path_f1": 0.492,
+        "experiments": 2.0,
+        "brier_committed": 0.157,
+        "coverage": 0.95
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.8,
+        "exact_wilson95": [
+          0.584,
+          0.919
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.2,
+        "path_f1": 0.344,
+        "experiments": 2.2,
+        "brier_committed": 0.176,
+        "coverage": 1.0
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.15,
+        "exact_wilson95": [
+          0.052,
+          0.36
+        ],
+        "abstained_with_truth": 0.45,
+        "wrong_commit": 0.4,
+        "path_f1": 0.324,
+        "experiments": 2.15,
+        "brier_committed": 0.398,
+        "coverage": 0.55
+      },
+      "usd_total": 0.1054,
+      "usd_per_episode": 0.00176
+    },
+    "playbook_final": {
+      "L0": {
+        "n": 20,
+        "exact": 0.5,
+        "exact_wilson95": [
+          0.299,
+          0.701
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.5,
+        "path_f1": 0.497,
+        "experiments": 0.05,
+        "brier_committed": 0.297,
+        "coverage": 1.0
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.7,
+        "exact_wilson95": [
+          0.481,
+          0.855
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.3,
+        "path_f1": 0.589,
+        "experiments": 0.0,
+        "brier_committed": 0.21,
+        "coverage": 1.0
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.65,
+        "exact_wilson95": [
+          0.433,
+          0.819
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.35,
+        "path_f1": 0.468,
+        "experiments": 1.25,
+        "brier_committed": 0.197,
+        "coverage": 1.0
+      }
+    },
+    "playbook_final_fix": {
+      "L0": {
+        "n": 20,
+        "exact": 0.5,
+        "exact_wilson95": [
+          0.299,
+          0.701
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.5,
+        "path_f1": 0.497,
+        "experiments": 0.05,
+        "brier_committed": 0.297,
+        "coverage": 1.0
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.7,
+        "exact_wilson95": [
+          0.481,
+          0.855
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.3,
+        "path_f1": 0.589,
+        "experiments": 0.0,
+        "brier_committed": 0.21,
+        "coverage": 1.0
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.65,
+        "exact_wilson95": [
+          0.433,
+          0.819
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.35,
+        "path_f1": 0.468,
+        "experiments": 1.25,
+        "brier_committed": 0.197,
+        "coverage": 1.0
+      }
+    },
+    "rules_final": {
+      "L0": {
+        "n": 20,
+        "exact": 0.5,
+        "exact_wilson95": [
+          0.299,
+          0.701
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.45,
+        "path_f1": 0.485,
+        "experiments": 0.0,
+        "brier_committed": 0.278,
+        "coverage": 0.95
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.7,
+        "exact_wilson95": [
+          0.481,
+          0.855
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.3,
+        "path_f1": 0.589,
+        "experiments": 0.0,
+        "brier_committed": 0.21,
+        "coverage": 1.0
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.0,
+        "exact_wilson95": [
+          -0.0,
+          0.161
+        ],
+        "abstained_with_truth": 0.65,
+        "wrong_commit": 0.35,
+        "path_f1": 0.078,
+        "experiments": 0.0,
+        "brier_committed": 0.334,
+        "coverage": 0.35
+      }
+    },
+    "rules_final_fix": {
+      "L0": {
+        "n": 20,
+        "exact": 0.5,
+        "exact_wilson95": [
+          0.299,
+          0.701
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.45,
+        "path_f1": 0.485,
+        "experiments": 0.0,
+        "brier_committed": 0.279,
+        "coverage": 0.95
+      },
+      "L1": {
+        "n": 20,
+        "exact": 0.7,
+        "exact_wilson95": [
+          0.481,
+          0.855
+        ],
+        "abstained_with_truth": 0.0,
+        "wrong_commit": 0.3,
+        "path_f1": 0.589,
+        "experiments": 0.0,
+        "brier_committed": 0.21,
+        "coverage": 1.0
+      },
+      "L2": {
+        "n": 20,
+        "exact": 0.0,
+        "exact_wilson95": [
+          -0.0,
+          0.161
+        ],
+        "abstained_with_truth": 0.65,
+        "wrong_commit": 0.35,
+        "path_f1": 0.078,
+        "experiments": 0.0,
+        "brier_committed": 0.49,
+        "coverage": 0.35
+      }
+    }
+  },
+  "paired_vs_playbook": {
+    "llm-gpt-5-mini_final_fix vs playbook L0": {
+      "n": 20,
+      "playbook_only": 1,
+      "agent_only": 9,
+      "mcnemar_p": 0.0215
+    },
+    "llm-gpt-5-mini_final_fix vs playbook L1": {
+      "n": 20,
+      "playbook_only": 4,
+      "agent_only": 5,
+      "mcnemar_p": 1.0
+    },
+    "llm-gpt-5-mini_final_fix vs playbook L2": {
+      "n": 20,
+      "playbook_only": 10,
+      "agent_only": 3,
+      "mcnemar_p": 0.0923
+    },
+    "llm-gpt-5-nano_final_fix vs playbook L0": {
+      "n": 20,
+      "playbook_only": 8,
+      "agent_only": 3,
+      "mcnemar_p": 0.2266
+    },
+    "llm-gpt-5-nano_final_fix vs playbook L1": {
+      "n": 20,
+      "playbook_only": 9,
+      "agent_only": 3,
+      "mcnemar_p": 0.146
+    },
+    "llm-gpt-5-nano_final_fix vs playbook L2": {
+      "n": 20,
+      "playbook_only": 11,
+      "agent_only": 0,
+      "mcnemar_p": 0.001
+    },
+    "llm-gpt-5.6-luna_final_fix vs playbook L0": {
+      "n": 20,
+      "playbook_only": 1,
+      "agent_only": 7,
+      "mcnemar_p": 0.0703
+    },
+    "llm-gpt-5.6-luna_final_fix vs playbook L1": {
+      "n": 20,
+      "playbook_only": 3,
+      "agent_only": 4,
+      "mcnemar_p": 1.0
+    },
+    "llm-gpt-5.6-luna_final_fix vs playbook L2": {
+      "n": 20,
+      "playbook_only": 13,
+      "agent_only": 0,
+      "mcnemar_p": 0.0002
+    },
+    "rules_final_fix vs playbook L0": {
+      "n": 20,
+      "playbook_only": 0,
+      "agent_only": 0,
+      "mcnemar_p": 1.0
+    },
+    "rules_final_fix vs playbook L1": {
+      "n": 20,
+      "playbook_only": 0,
+      "agent_only": 0,
+      "mcnemar_p": 1.0
+    },
+    "rules_final_fix vs playbook L2": {
+      "n": 20,
+      "playbook_only": 13,
+      "agent_only": 0,
+      "mcnemar_p": 0.0002
+    }
+  },
+  "run_to_run_prefix": {
+    "gpt-5.6-luna": {
+      "n": 60,
+      "same_answer": 0.717,
+      "exact_discordant": 11,
+      "exact_r1": 0.533,
+      "exact_r2": 0.583
+    },
+    "gpt-5-mini": {
+      "n": 60,
+      "same_answer": 0.683,
+      "exact_discordant": 11,
+      "exact_r1": 0.65,
+      "exact_r2": 0.533
+    }
+  },
+  "note": "runs tagged _fix are the post-review final results; r1/r2 are pre-fix (older lab: accepted-only cohort, z intervals) kept for repeat variability"
+}

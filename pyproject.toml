@@ -1,0 +1,46 @@
+[project]
+name = "deliverytwin"
+version = "0.1.0"
+description = "Simulation-grounded causal investigation and counterfactual intervention for last-mile logistics (simulated environment)."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+dependencies = [
+    "simpy>=4.1,<5",
+    "numpy>=2.0,<3",
+    "pydantic>=2.7,<3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "hypothesis>=6.100",
+    "ruff>=0.6",
+    "scikit-learn>=1.9.1",
+]
+llm = [
+    "openai>=3.42.1",
+]
+train = [
+    "accelerate>=1.15.0",
+    "bitsandbytes>=0.50.2",
+    "peft>=0.21.2",
+    "torch>=2.15.0",
+    "transformers>=5.22.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["deliverytwin"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

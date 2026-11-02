@@ -1,0 +1,14 @@
+DeliveryTwin AI
+Copyright 2026 gabeldev
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+It contains a synthetic simulation environment only; it does not represent any
+real delivery company, courier or operational data.
+
+Third-party material referenced or used (not redistributed in this repository):
+- Qwen3-1.7B (base model for the G4 adapter), Apache-2.0, Qwen Team / Alibaba Cloud.
+- databricks-dolly-15k (90 replay examples used in G4 training; not redistributed),
+  CC BY-SA 3.0, Databricks.
+- GSM8K (evaluation only; downloaded at run time), MIT, OpenAI.
+- Grubhub MDRP instances (calibration only, cloned locally, never redistributed),
+  no license file; see docs/decisions/ADR-0009-data-licensing.md.

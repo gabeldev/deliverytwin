@@ -1,0 +1,48 @@
+{
+  "train_n": 300,
+  "test_n": 60,
+  "per_level": {
+    "L0": {
+      "n_train": 100,
+      "n_test": 20,
+      "names_only_correct": 4,
+      "names_only_acc": 0.2,
+      "ci": [
+        0.081,
+        0.416
+      ],
+      "majority_correct": 3,
+      "majority_acc": 0.15,
+      "label": "principal",
+      "within_prediction": true
+    },
+    "L1": {
+      "n_train": 100,
+      "n_test": 20,
+      "names_only_correct": 8,
+      "names_only_acc": 0.4,
+      "ci": [
+        0.219,
+        0.613
+      ],
+      "majority_correct": 10,
+      "majority_acc": 0.5,
+      "label": "principal",
+      "within_prediction": true
+    },
+    "L2": {
+      "n_train": 100,
+      "n_test": 20,
+      "names_only_correct": 9,
+      "names_only_acc": 0.45,
+      "ci": [
+        0.258,
+        0.658
+      ],
+      "majority_correct": 9,
+      "majority_acc": 0.45,
+      "label": "principal",
+      "within_prediction": true
+    }
+  }
+}

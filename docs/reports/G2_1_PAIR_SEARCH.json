@@ -1,0 +1,302 @@
+{
+  "C_errors_vs_latency_constructed": {
+    "severity": {
+      "dispatch_error_surge": [
+        0.95,
+        0.98
+      ],
+      "dispatch_latency": [
+        0.95,
+        0.98
+      ]
+    },
+    "probe": {
+      "n": 80,
+      "chance": 0.575,
+      "logreg": {
+        "acc": 0.487,
+        "wilson95": [
+          0.381,
+          0.595
+        ]
+      },
+      "gboost": {
+        "acc": 0.537,
+        "wilson95": [
+          0.429,
+          0.643
+        ]
+      },
+      "top_features": [
+        [
+          "delivered_p90",
+          0.349
+        ],
+        [
+          "demand_recent",
+          0.135
+        ],
+        [
+          "zone_bad_spread",
+          0.101
+        ],
+        [
+          "bad_rate_lag15",
+          0.096
+        ]
+      ],
+      "best_upper_ci": 0.643
+    },
+    "impact_global_p50": {
+      "dispatch_error_surge": 9.5,
+      "dispatch_latency": 9.85
+    },
+    "detect_delay_median": 86.12919270873431,
+    "lab": {
+      "discriminating": "set_retry_backoff",
+      "effects": {
+        "dispatch_latency": {
+          "late_rate_delta_mean": 0.0,
+          "sd": 0.0,
+          "n": 18,
+          "nan_dropped": 0
+        },
+        "dispatch_error_surge": {
+          "late_rate_delta_mean": -0.1655,
+          "sd": 0.0361,
+          "n": 6,
+          "nan_dropped": 0
+        }
+      }
+    },
+    "lab_add_workers": {
+      "dispatch_latency": {
+        "late_rate_delta_mean": 0.0007,
+        "sd": 0.008,
+        "n": 18,
+        "nan_dropped": 0
+      },
+      "dispatch_error_surge": {
+        "late_rate_delta_mean": 0.0018,
+        "sd": 0.0036,
+        "n": 6,
+        "nan_dropped": 0
+      }
+    },
+    "lab_add_couriers": {
+      "dispatch_latency": {
+        "late_rate_delta_mean": -0.004,
+        "sd": 0.0086,
+        "n": 18,
+        "nan_dropped": 0
+      },
+      "dispatch_error_surge": {
+        "late_rate_delta_mean": -0.0005,
+        "sd": 0.0086,
+        "n": 6,
+        "nan_dropped": 0
+      }
+    },
+    "accepted_observational": false
+  },
+  "A_saturation_vs_errors": {
+    "severity": {
+      "dispatcher_saturation": [
+        7.5,
+        9.0
+      ],
+      "dispatch_error_surge": [
+        0.88,
+        0.97
+      ]
+    },
+    "probe": {
+      "n": 80,
+      "chance": 0.575,
+      "logreg": {
+        "acc": 0.95,
+        "wilson95": [
+          0.878,
+          0.98
+        ]
+      },
+      "gboost": {
+        "acc": 0.988,
+        "wilson95": [
+          0.933,
+          0.998
+        ]
+      },
+      "top_features": [
+        [
+          "delivered_p50",
+          0.95
+        ],
+        [
+          "open_share",
+          0.05
+        ],
+        [
+          "zone_bad_spread",
+          0.0
+        ],
+        [
+          "restaurant_bad_spread",
+          0.0
+        ]
+      ],
+      "best_upper_ci": 0.998
+    },
+    "impact_global_p50": {
+      "dispatcher_saturation": 20.08,
+      "dispatch_error_surge": 7.98
+    },
+    "detect_delay_median": 96.41992861344572,
+    "lab": {
+      "discriminating": "set_dispatcher_workers",
+      "effects": {
+        "dispatch_error_surge": {
+          "late_rate_delta_mean": -0.0022,
+          "sd": 0.0099,
+          "n": 18,
+          "nan_dropped": 0
+        },
+        "dispatcher_saturation": {
+          "late_rate_delta_mean": -0.8341,
+          "sd": 0.0697,
+          "n": 6,
+          "nan_dropped": 0
+        }
+      }
+    },
+    "lab_add_workers": {
+      "dispatch_error_surge": {
+        "late_rate_delta_mean": -0.0022,
+        "sd": 0.0099,
+        "n": 18,
+        "nan_dropped": 0
+      },
+      "dispatcher_saturation": {
+        "late_rate_delta_mean": -0.8341,
+        "sd": 0.0697,
+        "n": 6,
+        "nan_dropped": 0
+      }
+    },
+    "lab_add_couriers": {
+      "dispatch_error_surge": {
+        "late_rate_delta_mean": -0.0061,
+        "sd": 0.0255,
+        "n": 18,
+        "nan_dropped": 0
+      },
+      "dispatcher_saturation": {
+        "late_rate_delta_mean": 0.0,
+        "sd": 0.0,
+        "n": 6,
+        "nan_dropped": 0
+      }
+    },
+    "accepted_observational": false
+  },
+  "B_scarcity_vs_saturation_matched": {
+    "severity": {
+      "courier_scarcity": [
+        0.45,
+        0.7
+      ],
+      "dispatcher_saturation": [
+        7.5,
+        9.0
+      ]
+    },
+    "probe": {
+      "n": 80,
+      "chance": 0.575,
+      "logreg": {
+        "acc": 0.95,
+        "wilson95": [
+          0.878,
+          0.98
+        ]
+      },
+      "gboost": {
+        "acc": 0.95,
+        "wilson95": [
+          0.878,
+          0.98
+        ]
+      },
+      "top_features": [
+        [
+          "delivered_p50",
+          0.903
+        ],
+        [
+          "cancel_share",
+          0.057
+        ],
+        [
+          "bad_rate_lag15",
+          0.01
+        ],
+        [
+          "bad_rate_lag0",
+          0.009
+        ]
+      ],
+      "best_upper_ci": 0.98
+    },
+    "impact_global_p50": {
+      "courier_scarcity": 12.59,
+      "dispatcher_saturation": 19.65
+    },
+    "detect_delay_median": 101.81029986840208,
+    "lab": {
+      "discriminating": "set_dispatcher_workers",
+      "effects": {
+        "dispatcher_saturation": {
+          "late_rate_delta_mean": -0.8844,
+          "sd": 0.0972,
+          "n": 18,
+          "nan_dropped": 0
+        },
+        "courier_scarcity": {
+          "late_rate_delta_mean": -0.0019,
+          "sd": 0.0594,
+          "n": 6,
+          "nan_dropped": 0
+        }
+      }
+    },
+    "lab_add_workers": {
+      "dispatcher_saturation": {
+        "late_rate_delta_mean": -0.8844,
+        "sd": 0.0972,
+        "n": 18,
+        "nan_dropped": 0
+      },
+      "courier_scarcity": {
+        "late_rate_delta_mean": -0.0019,
+        "sd": 0.0594,
+        "n": 6,
+        "nan_dropped": 0
+      }
+    },
+    "lab_add_couriers": {
+      "dispatcher_saturation": {
+        "late_rate_delta_mean": -0.001,
+        "sd": 0.0041,
+        "n": 18,
+        "nan_dropped": 0
+      },
+      "courier_scarcity": {
+        "late_rate_delta_mean": -0.1025,
+        "sd": 0.0863,
+        "n": 6,
+        "nan_dropped": 0
+      }
+    },
+    "accepted_observational": false
+  }
+}

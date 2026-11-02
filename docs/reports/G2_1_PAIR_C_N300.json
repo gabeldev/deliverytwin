@@ -1,0 +1,103 @@
+{
+  "C_errors_vs_latency_constructed": {
+    "severity": {
+      "dispatch_error_surge": [
+        0.95,
+        0.98
+      ],
+      "dispatch_latency": [
+        0.95,
+        0.98
+      ]
+    },
+    "probe": {
+      "n": 300,
+      "chance": 0.523,
+      "logreg": {
+        "acc": 0.47,
+        "wilson95": [
+          0.414,
+          0.527
+        ]
+      },
+      "gboost": {
+        "acc": 0.5,
+        "wilson95": [
+          0.444,
+          0.556
+        ]
+      },
+      "top_features": [
+        [
+          "delivered_p50",
+          0.113
+        ],
+        [
+          "cancel_share",
+          0.111
+        ],
+        [
+          "open_share",
+          0.11
+        ],
+        [
+          "bad_rate_lag30",
+          0.108
+        ]
+      ],
+      "best_upper_ci": 0.556
+    },
+    "impact_global_time": {
+      "dispatch_error_surge": 15.54,
+      "dispatch_latency": 16.38
+    },
+    "detect_delay_median": 86.24885332934633,
+    "lab": {
+      "discriminating": "set_retry_backoff",
+      "effects": {
+        "dispatch_latency": {
+          "bad_rate_delta_mean": 0.0,
+          "sd": 0.0,
+          "n": 20,
+          "nan_dropped": 0
+        },
+        "dispatch_error_surge": {
+          "bad_rate_delta_mean": -0.2723,
+          "sd": 0.0751,
+          "n": 20,
+          "nan_dropped": 0
+        }
+      }
+    },
+    "lab_add_workers": {
+      "dispatch_latency": {
+        "bad_rate_delta_mean": -0.0005,
+        "sd": 0.0037,
+        "n": 20,
+        "nan_dropped": 0
+      },
+      "dispatch_error_surge": {
+        "bad_rate_delta_mean": -0.0013,
+        "sd": 0.0078,
+        "n": 20,
+        "nan_dropped": 0
+      }
+    },
+    "lab_add_couriers": {
+      "dispatch_latency": {
+        "bad_rate_delta_mean": -0.0032,
+        "sd": 0.0082,
+        "n": 20,
+        "nan_dropped": 0
+      },
+      "dispatch_error_surge": {
+        "bad_rate_delta_mean": -0.0032,
+        "sd": 0.0089,
+        "n": 20,
+        "nan_dropped": 0
+      }
+    },
+    "observational_status": "accepted",
+    "accepted_observational": true
+  }
+}

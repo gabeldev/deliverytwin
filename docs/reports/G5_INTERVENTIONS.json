@@ -1,0 +1,594 @@
+{
+  "n_incidents": 60,
+  "replicas": 20,
+  "menu": [
+    "add_couriers_5",
+    "add_couriers_10",
+    "workers_4",
+    "workers_6",
+    "retry_backoff_0.2",
+    "policy_eta_aware",
+    "admission_0.9",
+    "admission_0.8"
+  ],
+  "generation_failures": [],
+  "complete": true,
+  "effects_by_family": {
+    "courier_scarcity": {
+      "n": 12,
+      "add_couriers_5": {
+        "diff_bad": -0.1162,
+        "ci": [
+          -0.1353,
+          -0.0971
+        ],
+        "diff_rejected": 0.0
+      },
+      "add_couriers_10": {
+        "diff_bad": -0.243,
+        "ci": [
+          -0.2778,
+          -0.2081
+        ],
+        "diff_rejected": 0.0
+      },
+      "workers_4": {
+        "diff_bad": -0.0038,
+        "ci": [
+          -0.0107,
+          0.0031
+        ],
+        "diff_rejected": 0.0
+      },
+      "workers_6": {
+        "diff_bad": -0.0099,
+        "ci": [
+          -0.0168,
+          -0.0029
+        ],
+        "diff_rejected": 0.0
+      },
+      "retry_backoff_0.2": {
+        "diff_bad": -0.0018,
+        "ci": [
+          -0.0069,
+          0.0033
+        ],
+        "diff_rejected": 0.0
+      },
+      "policy_eta_aware": {
+        "diff_bad": 0.0012,
+        "ci": [
+          0.0,
+          0.0025
+        ],
+        "diff_rejected": 0.0
+      },
+      "admission_0.9": {
+        "diff_bad": -0.0045,
+        "ci": [
+          -0.0102,
+          0.0012
+        ],
+        "diff_rejected": 0.0996
+      },
+      "admission_0.8": {
+        "diff_bad": -0.0011,
+        "ci": [
+          -0.0106,
+          0.0084
+        ],
+        "diff_rejected": 0.2006
+      },
+      "placebo": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.0
+      }
+    },
+    "dispatch_error_surge": {
+      "n": 11,
+      "add_couriers_5": {
+        "diff_bad": -0.004,
+        "ci": [
+          -0.006,
+          -0.0021
+        ],
+        "diff_rejected": 0.0
+      },
+      "add_couriers_10": {
+        "diff_bad": -0.0067,
+        "ci": [
+          -0.0086,
+          -0.0048
+        ],
+        "diff_rejected": 0.0
+      },
+      "workers_4": {
+        "diff_bad": -0.0018,
+        "ci": [
+          -0.0029,
+          -0.0007
+        ],
+        "diff_rejected": 0.0
+      },
+      "workers_6": {
+        "diff_bad": -0.0018,
+        "ci": [
+          -0.0028,
+          -0.0008
+        ],
+        "diff_rejected": 0.0
+      },
+      "retry_backoff_0.2": {
+        "diff_bad": -0.2889,
+        "ci": [
+          -0.3419,
+          -0.2358
+        ],
+        "diff_rejected": 0.0
+      },
+      "policy_eta_aware": {
+        "diff_bad": -0.0095,
+        "ci": [
+          -0.0116,
+          -0.0073
+        ],
+        "diff_rejected": 0.0
+      },
+      "admission_0.9": {
+        "diff_bad": 0.0524,
+        "ci": [
+          0.0466,
+          0.0582
+        ],
+        "diff_rejected": 0.0995
+      },
+      "admission_0.8": {
+        "diff_bad": 0.1098,
+        "ci": [
+          0.0969,
+          0.1227
+        ],
+        "diff_rejected": 0.1986
+      },
+      "placebo": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.0
+      }
+    },
+    "dispatch_latency": {
+      "n": 9,
+      "add_couriers_5": {
+        "diff_bad": -0.0028,
+        "ci": [
+          -0.0041,
+          -0.0014
+        ],
+        "diff_rejected": 0.0
+      },
+      "add_couriers_10": {
+        "diff_bad": -0.0051,
+        "ci": [
+          -0.0074,
+          -0.0027
+        ],
+        "diff_rejected": 0.0
+      },
+      "workers_4": {
+        "diff_bad": 0.0001,
+        "ci": [
+          -0.0001,
+          0.0003
+        ],
+        "diff_rejected": 0.0
+      },
+      "workers_6": {
+        "diff_bad": 0.0001,
+        "ci": [
+          -0.0001,
+          0.0003
+        ],
+        "diff_rejected": 0.0
+      },
+      "retry_backoff_0.2": {
+        "diff_bad": 0.0,
+        "ci": [
+          -0.0001,
+          0.0002
+        ],
+        "diff_rejected": 0.0
+      },
+      "policy_eta_aware": {
+        "diff_bad": -0.0083,
+        "ci": [
+          -0.0111,
+          -0.0055
+        ],
+        "diff_rejected": 0.0
+      },
+      "admission_0.9": {
+        "diff_bad": 0.0546,
+        "ci": [
+          0.0495,
+          0.0598
+        ],
+        "diff_rejected": 0.0994
+      },
+      "admission_0.8": {
+        "diff_bad": 0.1072,
+        "ci": [
+          0.0974,
+          0.1169
+        ],
+        "diff_rejected": 0.1943
+      },
+      "placebo": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.0
+      }
+    },
+    "dispatcher_saturation": {
+      "n": 10,
+      "add_couriers_5": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.0
+      },
+      "add_couriers_10": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.0
+      },
+      "workers_4": {
+        "diff_bad": -0.2177,
+        "ci": [
+          -0.423,
+          -0.0124
+        ],
+        "diff_rejected": 0.0
+      },
+      "workers_6": {
+        "diff_bad": -0.7679,
+        "ci": [
+          -0.8719,
+          -0.6639
+        ],
+        "diff_rejected": 0.0
+      },
+      "retry_backoff_0.2": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.0
+      },
+      "policy_eta_aware": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.0
+      },
+      "admission_0.9": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.0977
+      },
+      "admission_0.8": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.1994
+      },
+      "placebo": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.0
+      }
+    },
+    "restaurant_bottleneck": {
+      "n": 18,
+      "add_couriers_5": {
+        "diff_bad": -0.0252,
+        "ci": [
+          -0.0343,
+          -0.0162
+        ],
+        "diff_rejected": 0.0
+      },
+      "add_couriers_10": {
+        "diff_bad": -0.0376,
+        "ci": [
+          -0.052,
+          -0.0232
+        ],
+        "diff_rejected": 0.0
+      },
+      "workers_4": {
+        "diff_bad": 0.0019,
+        "ci": [
+          0.0003,
+          0.0036
+        ],
+        "diff_rejected": 0.0
+      },
+      "workers_6": {
+        "diff_bad": 0.0043,
+        "ci": [
+          0.002,
+          0.0066
+        ],
+        "diff_rejected": 0.0
+      },
+      "retry_backoff_0.2": {
+        "diff_bad": 0.0003,
+        "ci": [
+          -0.0024,
+          0.0031
+        ],
+        "diff_rejected": 0.0
+      },
+      "policy_eta_aware": {
+        "diff_bad": 0.0029,
+        "ci": [
+          0.0002,
+          0.0057
+        ],
+        "diff_rejected": 0.0
+      },
+      "admission_0.9": {
+        "diff_bad": 0.0433,
+        "ci": [
+          0.0318,
+          0.0549
+        ],
+        "diff_rejected": 0.0992
+      },
+      "admission_0.8": {
+        "diff_bad": 0.1018,
+        "ci": [
+          0.0824,
+          0.1212
+        ],
+        "diff_rejected": 0.2002
+      },
+      "placebo": {
+        "diff_bad": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "diff_rejected": 0.0
+      }
+    }
+  },
+  "best_action_counts_by_family": {
+    "courier_scarcity": {
+      "add_couriers_10": 12
+    },
+    "dispatcher_saturation": {
+      "workers_6": 10
+    },
+    "restaurant_bottleneck": {
+      "add_couriers_10": 18
+    },
+    "dispatch_latency": {
+      "policy_eta_aware": 7,
+      "add_couriers_10": 2
+    },
+    "dispatch_error_surge": {
+      "retry_backoff_0.2": 11
+    }
+  },
+  "regret_vs_best": {
+    "remedy": {
+      "n": 60,
+      "mean": 0.0126,
+      "median": 0.0,
+      "share_within_0.02": 0.8
+    },
+    "playbook": {
+      "n": 60,
+      "mean": 0.1377,
+      "median": 0.0203,
+      "share_within_0.02": 0.5
+    },
+    "gpt-5-mini": {
+      "n": 41,
+      "mean": 0.0546,
+      "median": 0.0,
+      "share_within_0.02": 0.659
+    },
+    "gpt-5.6-luna": {
+      "n": 52,
+      "mean": 0.1109,
+      "median": 0.0063,
+      "share_within_0.02": 0.558
+    },
+    "qwen-sft": {
+      "n": 60,
+      "mean": 0.1591,
+      "median": 0.0085,
+      "share_within_0.02": 0.617
+    },
+    "qwen-base": {
+      "n": 60,
+      "mean": 0.2504,
+      "median": 0.1694,
+      "share_within_0.02": 0.25
+    }
+  },
+  "regret_vs_common_oracle": {
+    "remedy": {
+      "n": 60,
+      "mean": 0.0434,
+      "median": 0.0095,
+      "share_within_0.02": 0.617
+    },
+    "playbook": {
+      "n": 60,
+      "mean": 0.1685,
+      "median": 0.0303,
+      "share_within_0.02": 0.433
+    },
+    "gpt-5-mini": {
+      "n": 41,
+      "mean": 0.0563,
+      "median": 0.0,
+      "share_within_0.02": 0.659
+    },
+    "gpt-5.6-luna": {
+      "n": 52,
+      "mean": 0.1267,
+      "median": 0.0222,
+      "share_within_0.02": 0.5
+    },
+    "qwen-sft": {
+      "n": 60,
+      "mean": 0.1899,
+      "median": 0.0117,
+      "share_within_0.02": 0.567
+    },
+    "qwen-base": {
+      "n": 60,
+      "mean": 0.2812,
+      "median": 0.203,
+      "share_within_0.02": 0.25
+    }
+  },
+  "agent_coverage": {
+    "playbook": {
+      "by_level": {
+        "L0": 20,
+        "L1": 20,
+        "L2": 20
+      },
+      "complete": true,
+      "infeasible_recommendations": 0
+    },
+    "gpt-5-mini": {
+      "by_level": {
+        "L0": 20,
+        "L1": 20,
+        "L2": 20
+      },
+      "complete": true,
+      "infeasible_recommendations": 19
+    },
+    "gpt-5.6-luna": {
+      "by_level": {
+        "L0": 20,
+        "L1": 20,
+        "L2": 20
+      },
+      "complete": true,
+      "infeasible_recommendations": 8
+    },
+    "qwen-sft": {
+      "by_level": {
+        "L0": 20,
+        "L1": 20,
+        "L2": 20
+      },
+      "complete": true,
+      "infeasible_recommendations": 0
+    },
+    "qwen-base": {
+      "by_level": {
+        "L0": 20,
+        "L1": 20,
+        "L2": 20
+      },
+      "complete": true,
+      "infeasible_recommendations": 0
+    }
+  },
+  "variance_ratio_paired_over_unpaired": {
+    "add_couriers_5": {
+      "n": 50,
+      "median": 0.058,
+      "q25": 0.0147,
+      "q75": 0.1814,
+      "share_below_1": 0.96
+    },
+    "add_couriers_10": {
+      "n": 50,
+      "median": 0.1092,
+      "q25": 0.0275,
+      "q75": 0.2666,
+      "share_below_1": 1.0
+    },
+    "workers_4": {
+      "n": 59,
+      "median": 0.0561,
+      "q25": 0.01,
+      "q75": 0.5541,
+      "share_below_1": 0.831
+    },
+    "workers_6": {
+      "n": 60,
+      "median": 0.0569,
+      "q25": 0.01,
+      "q75": 0.5769,
+      "share_below_1": 0.8
+    },
+    "retry_backoff_0.2": {
+      "n": 50,
+      "median": 0.1134,
+      "q25": 0.0149,
+      "q75": 0.4672,
+      "share_below_1": 0.96
+    },
+    "policy_eta_aware": {
+      "n": 50,
+      "median": 0.0284,
+      "q25": 0.0194,
+      "q75": 0.0513,
+      "share_below_1": 1.0
+    },
+    "admission_0.9": {
+      "n": 50,
+      "median": 0.1798,
+      "q25": 0.1239,
+      "q75": 0.2866,
+      "share_below_1": 0.96
+    },
+    "admission_0.8": {
+      "n": 50,
+      "median": 0.2972,
+      "q25": 0.2117,
+      "q75": 0.5387,
+      "share_below_1": 0.94
+    }
+  },
+  "placebo_all_exactly_zero": true,
+  "mean_pareto_size": 2.82
+}

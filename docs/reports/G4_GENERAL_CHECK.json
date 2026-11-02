@@ -1,0 +1,25 @@
+{
+  "benchmark": "GSM8K test (openai/grade-school-math, MIT), fixed random subset, seed 0",
+  "n": 150,
+  "decoding": "greedy, non-thinking, max_new_tokens=512",
+  "base_acc": 0.6067,
+  "sft_acc": 0.14,
+  "base_only_correct": 79,
+  "sft_only_correct": 9,
+  "mcnemar_p": 0.0,
+  "minutes": 19.8,
+  "no_parsable_answer": {
+    "base": 19,
+    "sft": 116
+  },
+  "diagnostic_last_number": {
+    "label": "exploratory, defined after the run",
+    "rule": "last number in the response, $ and commas stripped",
+    "base_correct": 101,
+    "sft_correct": 67,
+    "base_only": 52,
+    "sft_only": 18,
+    "mcnemar_p": 0.0001,
+    "sft_unparsable_but_last_number_right": 46
+  }
+}

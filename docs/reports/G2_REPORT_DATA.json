@@ -1,0 +1,420 @@
+{
+  "world_config": {
+    "grid_size": 12,
+    "n_zones": 3,
+    "minutes_per_block": 1.5,
+    "travel_noise_sigma": 0.25,
+    "n_restaurants": 10,
+    "kitchen_capacity": 2,
+    "kitchen_target_utilization": 0.6,
+    "restaurant_popularity_sigma": 0.8,
+    "prep_mean_minutes": 12.0,
+    "n_couriers": 40,
+    "courier_shift_availability": 0.9,
+    "courier_accept_prob": 0.85,
+    "accept_key_mode": "slot",
+    "dispatcher_workers": 2,
+    "dispatch_service_minutes": 0.3,
+    "dispatch_error_prob": 0.01,
+    "dispatch_retry_minutes": 1.0,
+    "dispatch_policy": "nearest",
+    "admission_rate": 1.0,
+    "customer_patience_floor_minutes": 25.0,
+    "customer_patience_mean_minutes": 30.0,
+    "promised_delivery_minutes": 40.0,
+    "demand": [
+      {
+        "zone": 0,
+        "orders_per_minute": 0.35
+      },
+      {
+        "zone": 1,
+        "orders_per_minute": 0.45
+      },
+      {
+        "zone": 2,
+        "orders_per_minute": 0.3
+      }
+    ],
+    "horizon_minutes": 300,
+    "day": 0
+  },
+  "detector": {
+    "thr_global": 0.2543,
+    "thr_local": 0.45
+  },
+  "fault_effects": {
+    "courier_scarcity": {
+      "delivery_p50": {
+        "mean": 8.4879,
+        "ci95": [
+          7.7234,
+          9.2523
+        ],
+        "n": 40
+      },
+      "late_rate": {
+        "mean": 0.2028,
+        "ci95": [
+          0.1797,
+          0.2259
+        ],
+        "n": 40
+      },
+      "cancel_rate": {
+        "mean": 0.2122,
+        "ci95": [
+          0.1823,
+          0.242
+        ],
+        "n": 40
+      },
+      "assign_delay_mean": {
+        "mean": 13.4894,
+        "ci95": [
+          12.4889,
+          14.4899
+        ],
+        "n": 40
+      }
+    },
+    "dispatcher_saturation": {
+      "delivery_p50": {
+        "mean": 22.0409,
+        "ci95": [
+          20.7664,
+          23.3155
+        ],
+        "n": 40
+      },
+      "late_rate": {
+        "mean": 0.5432,
+        "ci95": [
+          0.5167,
+          0.5698
+        ],
+        "n": 40
+      },
+      "cancel_rate": {
+        "mean": 0.2973,
+        "ci95": [
+          0.283,
+          0.3117
+        ],
+        "n": 40
+      },
+      "assign_delay_mean": {
+        "mean": 30.5408,
+        "ci95": [
+          29.7865,
+          31.295
+        ],
+        "n": 40
+      }
+    },
+    "restaurant_bottleneck": {
+      "delivery_p50": {
+        "mean": 0.3263,
+        "ci95": [
+          0.1626,
+          0.49
+        ],
+        "n": 40
+      },
+      "late_rate": {
+        "mean": 0.0089,
+        "ci95": [
+          0.0051,
+          0.0127
+        ],
+        "n": 40
+      },
+      "cancel_rate": {
+        "mean": 0.0337,
+        "ci95": [
+          0.0264,
+          0.041
+        ],
+        "n": 40
+      },
+      "assign_delay_mean": {
+        "mean": 0.1516,
+        "ci95": [
+          0.0112,
+          0.292
+        ],
+        "n": 40
+      }
+    }
+  },
+  "detection_power": {
+    "courier_scarcity": {
+      "outcomes": {
+        "detected": 56,
+        "not_detected": 4
+      },
+      "detection_rate": 0.933,
+      "wilson95": [
+        0.8407,
+        0.9738
+      ],
+      "delay_median": 77.24537236106976,
+      "delay_iqr": [
+        68.7483325300533,
+        87.28601669075945
+      ]
+    },
+    "dispatcher_saturation": {
+      "outcomes": {
+        "detected": 60
+      },
+      "detection_rate": 1.0,
+      "wilson95": [
+        0.9398,
+        1.0
+      ],
+      "delay_median": 76.4179902512588,
+      "delay_iqr": [
+        69.44664914116942,
+        92.16903674026182
+      ]
+    },
+    "restaurant_bottleneck": {
+      "outcomes": {
+        "not_detected": 41,
+        "detected": 19
+      },
+      "detection_rate": 0.317,
+      "wilson95": [
+        0.2131,
+        0.4423
+      ],
+      "delay_median": 75.62966417885855,
+      "delay_iqr": [
+        61.71962203451214,
+        110.5904514650991
+      ]
+    }
+  },
+  "levels": {
+    "L0": {
+      "n": 60,
+      "families": {
+        "restaurant_bottleneck": 20,
+        "courier_scarcity": 17,
+        "dispatcher_saturation": 23
+      },
+      "attempts_mean": 2.13,
+      "detect_delay_median": 68.24771253540818,
+      "accuracy": {
+        "rules": {
+          "rate": 0.65,
+          "wilson95": [
+            0.5236,
+            0.7583
+          ]
+        },
+        "rules_family": {
+          "rate": 0.683,
+          "wilson95": [
+            0.5577,
+            0.7869
+          ]
+        },
+        "majority_family": {
+          "rate": 0.383,
+          "wilson95": [
+            0.2709,
+            0.5098
+          ]
+        },
+        "random_family": {
+          "rate": 0.383,
+          "wilson95": [
+            0.2709,
+            0.5098
+          ]
+        }
+      },
+      "rules_unresolved_on_pair": {
+        "rate": 0.0
+      },
+      "leaks_found": 0,
+      "majority_family_train": "dispatcher_saturation"
+    },
+    "L1": {
+      "n": 60,
+      "families": {
+        "courier_scarcity": 15,
+        "restaurant_bottleneck": 24,
+        "dispatcher_saturation": 21
+      },
+      "attempts_mean": 2.33,
+      "detect_delay_median": 65.45873084110481,
+      "accuracy": {
+        "rules": {
+          "rate": 0.633,
+          "wilson95": [
+            0.5068,
+            0.7438
+          ]
+        },
+        "rules_family": {
+          "rate": 0.65,
+          "wilson95": [
+            0.5236,
+            0.7583
+          ]
+        },
+        "majority_family": {
+          "rate": 0.4,
+          "wilson95": [
+            0.2857,
+            0.5263
+          ]
+        },
+        "random_family": {
+          "rate": 0.3,
+          "wilson95": [
+            0.199,
+            0.4251
+          ]
+        }
+      },
+      "rules_unresolved_on_pair": {
+        "rate": 0.0
+      },
+      "leaks_found": 0,
+      "majority_family_train": "restaurant_bottleneck"
+    },
+    "L2": {
+      "n": 60,
+      "families": {
+        "dispatcher_saturation": 34,
+        "courier_scarcity": 26
+      },
+      "attempts_mean": 1.22,
+      "detect_delay_median": 70.52473204225106,
+      "accuracy": {
+        "rules": {
+          "rate": 0.0,
+          "wilson95": [
+            -0.0,
+            0.0602
+          ]
+        },
+        "rules_family": {
+          "rate": 0.0,
+          "wilson95": [
+            -0.0,
+            0.0602
+          ]
+        },
+        "majority_family": {
+          "rate": 0.567,
+          "wilson95": [
+            0.441,
+            0.6843
+          ]
+        },
+        "random_family": {
+          "rate": 0.617,
+          "wilson95": [
+            0.4902,
+            0.7291
+          ]
+        }
+      },
+      "rules_unresolved_on_pair": {
+        "rate": 0.817
+      },
+      "leaks_found": 0,
+      "majority_family_train": "dispatcher_saturation"
+    }
+  },
+  "probe": {
+    "customer": {
+      "n": 136,
+      "positives": 63,
+      "logreg_acc": [
+        0.926,
+        0.041
+      ],
+      "gboost_acc": [
+        0.904,
+        0.019
+      ],
+      "chance": 0.537
+    },
+    "full": {
+      "n": 76,
+      "positives": 37,
+      "logreg_acc": [
+        1.0,
+        0.0
+      ],
+      "gboost_acc": [
+        1.0,
+        0.0
+      ],
+      "chance": 0.513
+    }
+  },
+  "key_sensitivity": {
+    "slot": {
+      "add_couriers_5": {
+        "effect": {
+          "mean": -0.2359,
+          "ci95": [
+            -0.3321,
+            -0.1397
+          ],
+          "n": 40
+        },
+        "var_ratio": 0.0736
+      },
+      "policy_eta_aware": {
+        "effect": {
+          "mean": 1.3496,
+          "ci95": [
+            1.1316,
+            1.5677
+          ],
+          "n": 40
+        },
+        "var_ratio": 0.3389
+      }
+    },
+    "dyad": {
+      "add_couriers_5": {
+        "effect": {
+          "mean": -0.2001,
+          "ci95": [
+            -0.2805,
+            -0.1197
+          ],
+          "n": 40
+        },
+        "var_ratio": 0.0506
+      },
+      "policy_eta_aware": {
+        "effect": {
+          "mean": 1.3813,
+          "ci95": [
+            1.164,
+            1.5986
+          ],
+          "n": 40
+        },
+        "var_ratio": 0.3095
+      }
+    }
+  },
+  "leak_mutation": {
+    "clean_payload_hits": [],
+    "planted_payload_hits": [
+      "courier_scarcity",
+      "\\br\\d{3}\\b"
+    ]
+  }
+}

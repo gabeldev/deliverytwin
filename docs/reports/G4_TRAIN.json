@@ -1,0 +1,33 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "train_traces": 362,
+  "val_traces": 132,
+  "replay_examples": 90,
+  "general_eval_examples": 150,
+  "epochs": 2,
+  "lr": 0.0002,
+  "grad_accum": 8,
+  "lora_r": 16,
+  "seed": 0,
+  "before": {
+    "val_loss": 1.8098,
+    "general_loss": 4.8616
+  },
+  "epochs_log": [
+    {
+      "epoch": 1,
+      "val_loss": 0.0167
+    },
+    {
+      "epoch": 2,
+      "val_loss": 0.015
+    }
+  ],
+  "after": {
+    "val_loss": 0.015,
+    "general_loss": 1.7783
+  },
+  "steps": 113,
+  "minutes": 80.7,
+  "peak_mem_gb": 3.049
+}

@@ -1,0 +1,30 @@
+{
+  "model": "Qwen/Qwen3-1.7B",
+  "dev_seed": 2026,
+  "max_len": 4608,
+  "per_level_attempted": 300,
+  "counts": {
+    "kept_train_L0": 109,
+    "kept_train_L1": 121,
+    "kept_train_L2": 132,
+    "kept_val_L0": 46,
+    "kept_val_L1": 39,
+    "kept_val_L2": 47,
+    "rejected_incorrect_L0": 81,
+    "rejected_incorrect_L1": 82,
+    "rejected_incorrect_L2": 52,
+    "skipped_test_split": 191
+  },
+  "length": {
+    "train": {
+      "n": 362,
+      "mean": 3529.7,
+      "max": 4201
+    },
+    "val": {
+      "n": 132,
+      "mean": 3545.5,
+      "max": 4183
+    }
+  }
+}

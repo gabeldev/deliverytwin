@@ -1,0 +1,98 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "total_gb": 5.66,
+  "torch": "2.15.0+cu132",
+  "results": [
+    {
+      "model": "Qwen/Qwen3-1.7B",
+      "seq_len": 1024,
+      "trainable_params": 17432576,
+      "loss_positions_frac": 0.3,
+      "fp32_upcast": false,
+      "ok": true,
+      "loss": 12.14,
+      "peak_allocated_gb": 2.128,
+      "peak_reserved_gb": 2.484,
+      "seconds": 3.8
+    },
+    {
+      "model": "Qwen/Qwen3-1.7B",
+      "seq_len": 2048,
+      "trainable_params": 17432576,
+      "loss_positions_frac": 0.3,
+      "fp32_upcast": false,
+      "ok": true,
+      "loss": 12.281,
+      "peak_allocated_gb": 3.279,
+      "peak_reserved_gb": 3.857,
+      "seconds": 4.4
+    },
+    {
+      "model": "Qwen/Qwen3-1.7B",
+      "seq_len": 4096,
+      "trainable_params": 17432576,
+      "loss_positions_frac": 0.3,
+      "fp32_upcast": false,
+      "ok": true,
+      "loss": 12.261,
+      "peak_allocated_gb": 4.557,
+      "peak_reserved_gb": 5.219,
+      "seconds": 7.5
+    },
+    {
+      "model": "Qwen/Qwen3-1.7B",
+      "seq_len": 6144,
+      "trainable_params": 17432576,
+      "loss_positions_frac": 0.3,
+      "fp32_upcast": false,
+      "ok": false,
+      "error": "OOM",
+      "peak_allocated_gb": 4.295,
+      "peak_reserved_gb": 4.893,
+      "seconds": 4.4
+    },
+    {
+      "model": "Qwen/Qwen3-4B",
+      "seq_len": 1024,
+      "trainable_params": 33030144,
+      "loss_positions_frac": 0.3,
+      "fp32_upcast": false,
+      "ok": true,
+      "loss": 12.117,
+      "peak_allocated_gb": 3.325,
+      "peak_reserved_gb": 4.1,
+      "seconds": 233.4
+    },
+    {
+      "model": "Qwen/Qwen3-4B",
+      "seq_len": 2048,
+      "trainable_params": 33030144,
+      "loss_positions_frac": 0.3,
+      "fp32_upcast": false,
+      "ok": false,
+      "error": "OOM",
+      "peak_allocated_gb": 5.003,
+      "peak_reserved_gb": 5.213,
+      "seconds": 4.8
+    }
+  ],
+  "realistic_loss_fraction": [
+    {
+      "model": "Qwen/Qwen3-1.7B",
+      "seq_len": 4352,
+      "loss_positions_frac": 0.1,
+      "ok": true,
+      "peak_allocated_gb": 2.74,
+      "peak_reserved_gb": 3.182
+    },
+    {
+      "model": "Qwen/Qwen3-1.7B",
+      "seq_len": 4608,
+      "loss_positions_frac": 0.1,
+      "ok": true,
+      "peak_allocated_gb": 3.501,
+      "peak_reserved_gb": 4.004
+    }
+  ],
+  "decision": "Qwen3-1.7B, max sequence 4608 tokens with assistant-only loss (~5-10% of positions). Qwen3-4B rejected: OOM at 2048 tokens. Earlier OOMs were caused by the fp32 upcast in prepare_model_for_kbit_training and by the model not being in train mode (gradient checkpointing inactive)."
+}
