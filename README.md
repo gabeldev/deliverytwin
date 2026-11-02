@@ -4,6 +4,8 @@ Simulation-grounded causal investigation and counterfactual intervention for las
 
 > **Simulated environment.** Nothing here represents a real delivery company, real couriers or real operational data.
 
+**Interactive research preview:** https://deliverytwin-puce.vercel.app (follow an investigation, run counterfactual decisions, read the results). Source in [`site/`](site/).
+
 A simulated delivery world hides an injected operational fault with a known causal structure. An investigator agent sees only telemetry and can run **paired counterfactual experiments** in a sandbox. An isolated evaluator scores the diagnosis, the reasoning path and the recommendation against the hidden ground truth.
 
 ```bash
