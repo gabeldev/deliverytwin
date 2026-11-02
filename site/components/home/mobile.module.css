@@ -1,0 +1,4 @@
+.lead { display: none; }
+@media (max-width: 1000px) {
+  .lead { display: grid; gap: 20px; justify-items: start; padding-block: 24px 0; font-size: 1.0625rem; }
+}

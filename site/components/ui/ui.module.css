@@ -1,0 +1,26 @@
+/* Product interface pieces (data-ui fragments). Their own conventions: small labels,
+   panel borders and status colours belong to the product, not to the marketing page. */
+
+.chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 2px 7px 2px 5px; border-radius: 3px;
+  font-size: 0.8125rem; font-weight: 500; line-height: 1.45; letter-spacing: 0.02em; text-transform: uppercase;
+  white-space: nowrap;
+}
+.chip svg { width: 13px; height: 13px; flex: none; }
+.chip[data-status="observation"] { color: var(--st-observation); background: rgb(29 78 216 / 0.09); }
+.chip[data-status="hypothesis"] { color: var(--st-hypothesis); background: rgb(109 40 217 / 0.09); }
+.chip[data-status="assumption"] { color: var(--st-assumption); background: rgb(180 83 9 / 0.1); }
+.chip[data-status="experiment"] { color: var(--st-experiment); background: rgb(4 120 87 / 0.09); }
+.chip[data-status="recommendation"] { color: var(--st-recommendation); background: rgb(190 24 93 / 0.08); }
+.chip[data-status="truth"] { color: var(--st-truth); background: rgb(185 28 28 / 0.08); }
+
+.source {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 0.8125rem; color: var(--muted);
+}
+.source::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; flex: none; }
+.source[data-kind="recorded"]::before { background: #b45309; }
+.source[data-kind="deterministic"]::before { background: #232323; }
+.source[data-kind="simulated"]::before, .source[data-kind="precomputed"]::before { background: #0f7a52; }
+
+.panel { background: var(--surface); border-radius: var(--radius); }

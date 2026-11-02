@@ -1,0 +1,62 @@
+.fig { position: relative; margin: 0; }
+.svg { display: block; max-width: 100%; overflow: visible; font-family: var(--font-text); }
+.axisCap { text-align: right; font-size: 0.8125rem; color: var(--muted); margin-top: 2px; }
+.grid { stroke: rgba(35, 35, 35, 0.1); stroke-width: 1; }
+.tickY { font-size: 13px; fill: var(--muted); text-anchor: end; dominant-baseline: middle; font-variant-numeric: tabular-nums; }
+.tickX { font-size: 13px; fill: var(--muted); text-anchor: middle; font-variant-numeric: tabular-nums; }
+.axisLabel { font-size: 14px; fill: var(--muted); text-anchor: end; }
+.band { fill: rgba(29, 78, 216, 0.06); }
+.marker { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 3 3; }
+.markerText { font-size: 13px; fill: var(--ink); text-anchor: end; }
+.cross { stroke: rgba(35, 35, 35, 0.35); stroke-width: 1; }
+.tip {
+  position: absolute; top: 0; transform: translateX(-50%); pointer-events: none;
+  background: var(--ink); color: #fff; border-radius: var(--radius); padding: 8px 10px;
+  font-size: 0.8125rem; line-height: 1.4; display: grid; gap: 2px; white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18); z-index: 2;
+}
+.tip span { display: flex; align-items: center; gap: 6px; font-variant-numeric: tabular-nums; }
+.tip i, .legend i { width: 10px; height: 3px; border-radius: 2px; display: inline-block; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.8125rem; color: var(--ink); margin-top: 6px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i[data-dashed] { background-image: linear-gradient(90deg, currentColor 60%, transparent 0) !important; background-size: 6px 3px; }
+.table { margin-top: 8px; font-size: 0.8125rem; }
+.table summary { cursor: pointer; color: var(--muted); width: fit-content; }
+.table summary:hover { color: var(--ink); }
+.tableScroll { max-height: 220px; overflow: auto; margin-top: 6px; }
+.table table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.table th, .table td { text-align: right; padding: 2px 10px; }
+.table th[scope="row"], .table thead th:first-child { text-align: left; }
+
+/* effect plot */
+.effect { display: grid; gap: 2px; }
+.effectHead { display: grid; grid-template-columns: minmax(130px, 1.1fr) minmax(160px, 2fr) 110px; font-size: 0.8125rem; color: var(--muted); }
+.effectAxis { position: relative; height: 16px; }
+.effectAxis span:first-child { position: absolute; transform: translateX(-50%); }
+.better { position: absolute; left: 0; }
+.effectRow {
+  display: grid; grid-template-columns: minmax(130px, 1.1fr) minmax(160px, 2fr) 110px; align-items: center;
+  gap: 8px; width: 100%; padding: 4px 6px; border: 0; border-radius: var(--radius); background: transparent;
+  text-align: left; cursor: default;
+}
+button.effectRow { cursor: pointer; transition: background-color 140ms var(--ease-out); }
+button.effectRow:hover { background: rgba(35, 35, 35, 0.05); }
+.effectRow[data-on] { background: #fff; box-shadow: inset 0 0 0 2px var(--ink); }
+.effectRow[data-muted] { opacity: 0.6; }
+.effectLabel { font-size: 0.875rem; line-height: 1.25; display: grid; }
+.effectLabel small, .effectVal small { font-size: 0.8125rem; color: var(--muted); }
+.effectSvg { width: 100%; height: 30px; }
+.zero { stroke: var(--ink); stroke-width: 1.5; }
+.ci { stroke: var(--series-treat); stroke-width: 2; stroke-linecap: round; }
+.dot { fill: var(--series-treat); stroke: #fff; stroke-width: 2; }
+.effectVal { font-size: 0.875rem; display: grid; text-align: right; }
+
+.acc { display: grid; gap: 4px; }
+.accRow { display: grid; grid-template-columns: minmax(150px, 1.2fr) minmax(140px, 2fr) 92px; align-items: center; gap: 10px; padding: 4px 6px; border-radius: var(--radius); }
+.accRow[data-on] { background: var(--accent); }
+.accPlot svg { width: 100%; height: 26px; }
+
+@media (max-width: 560px) {
+  .effectHead, .effectRow { grid-template-columns: 1fr 1.3fr 84px; }
+  .accRow { grid-template-columns: 1fr 1.2fr 76px; }
+}

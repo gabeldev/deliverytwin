@@ -26,7 +26,7 @@ O benchmark **não roda sem o simulador**. Nos níveis L2, L4 e L6, a ferramenta
 
 - **Este repositório é a parte aberta** e recebeu `LICENSE` (Apache-2.0) e `NOTICE` na raiz. Contém o mundo sintético, as falhas, o laboratório modo A/B sobre o mundo sintético, o benchmark, o avaliador, os agentes de referência e os scripts.
 - **A parte proprietária vai para um repositório separado e privado** (ex.: `deliverytwin-cloud`, ADR-0011 item 3): ingestão de dados reais, calibração de gêmeo a partir de dados de clientes, painel e serviço gerenciado. Nada disso pode entrar neste repositório.
-- **Repositório público:** publicado como cópia limpa do estado final, sem documentos comerciais internos e sem o histórico de desenvolvimento.
+- **Repositório público:** cópia limpa do estado final, sem documentos comerciais internos e sem o histórico de desenvolvimento.
 - Cada artefato publicado leva a própria licença: `license: apache-2.0` nos metadados do cartão do modelo e do cartão do dataset, e arquivo `LICENSE` junto do artefato no Hugging Face.
 - Antes de publicar o benchmark, é preciso uma semente final secreta nova, porque a 515151 está nos documentos (LIMITATIONS §3).
 - Dependências do núcleo seguem restritas a licenças compatíveis com Apache-2.0 e com uso comercial (ADR-0009).

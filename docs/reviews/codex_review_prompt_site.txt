@@ -1,0 +1,14 @@
+You are an independent reviewer of the public showcase site of DeliveryTwin AI (a research project: simulated delivery city, hidden injected faults, investigator agents, paired counterfactual lab). Work read-only. Do NOT read .env, site/.env*, runs/llm_ledger*.
+
+Scope: site/ (Next.js app), scripts/site_export.py, scripts/site_research.py, site/public/data/**, PRODUCT.md.
+Live deployment for reference: https://deliverytwin-puce.vercel.app (you may not have network; review the code and data).
+
+Find concrete problems in:
+1. Claims: any number or statement in site/lib/i18n.ts, site/lib/lab-i18n.ts, site/app/[locale]/research/page.tsx or components that does not match docs/reports/*.json, docs/reports/G5_REPORT.md or the exported data. Overclaims about real-world value, live AI, or validation.
+2. Hidden-truth separation: does anything sent to the browser before the visitor presses "Reveal" contain the injected fault family/parameters or evaluator verdicts for the lab scenarios (site/public/data/scenarios/<id>.json vs <id>.truth.json)? The home page intentionally narrates one incident (l2-2) end to end; note if that is presented honestly.
+3. Security of site/app/api/interest/route.ts (validation, abuse, storage privacy, error handling) and next.config.ts headers.
+4. Correctness bugs in client components (state, effects, edge cases: missing sessions, scenario switch, reduced motion, keyboard access, ARIA).
+5. Accessibility: contrast, labels, focus, colour-only meaning, charts without text alternatives.
+6. Data export correctness: binning, CI computation, replica ids, trajectory reconstruction in scripts/site_export.py.
+
+Output: numbered findings with severity (High/Medium/Low), file:line, the problem, evidence, and a concrete fix. Say explicitly which areas you checked and found clean.

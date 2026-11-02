@@ -1,0 +1,5 @@
+.env*
+.taste-skill
+node_modules
+.next
+tests

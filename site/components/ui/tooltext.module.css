@@ -1,0 +1,6 @@
+.wrap { display: grid; gap: 6px; min-width: 0; width: 100%; }
+.pre { margin: 0; white-space: pre-wrap; word-break: break-word; font-family: var(--font-code); font-size: 0.8125rem; line-height: 1.5; }
+.scroll { overflow-x: auto; max-width: 100%; }
+.table { border-collapse: collapse; font-family: var(--font-text); font-size: 0.8125rem; font-variant-numeric: tabular-nums; }
+.table th { text-align: left; font-weight: 400; color: var(--muted); padding: 2px 12px 4px 0; border-bottom: 1px solid #dcdcdc; white-space: nowrap; }
+.table td { padding: 2px 12px 2px 0; white-space: nowrap; }

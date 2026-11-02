@@ -1,0 +1,66 @@
+.h2 { font-size: clamp(2rem, 1.4rem + 2.2vw, 2.75rem); }
+.h3 { font-size: 1.5rem; letter-spacing: -0.03em; line-height: 1.1; }
+.note { margin-top: 14px; max-width: 46ch; color: var(--ink); }
+
+/* Total and its receipt */
+.receipt { display: grid; grid-template-columns: 6fr 1fr 5fr; padding-block: var(--section-gap) 0; min-height: 90svh; }
+.receiptLeft { grid-column: 1; display: grid; align-content: space-between; gap: 48px; }
+.total { font-size: clamp(7rem, 16vw, 17rem); font-weight: 500; letter-spacing: -0.06em; line-height: 0.8; }
+.cap { margin-top: 18px; font-size: 1.0625rem; }
+.slip {
+  grid-column: 3; align-self: start; background: #fafafa; padding: 28px 26px 44px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 12px 30px rgba(0, 0, 0, 0.06);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), 95% 100%, 90% calc(100% - 12px), 85% 100%, 80% calc(100% - 12px), 75% 100%, 70% calc(100% - 12px), 65% 100%, 60% calc(100% - 12px), 55% 100%, 50% calc(100% - 12px), 45% 100%, 40% calc(100% - 12px), 35% 100%, 30% calc(100% - 12px), 25% 100%, 20% calc(100% - 12px), 15% 100%, 10% calc(100% - 12px), 5% 100%, 0 calc(100% - 12px));
+  font-size: 0.9375rem; max-width: 440px;
+}
+.group { margin-bottom: 18px; }
+.gname { font-weight: 500; margin-bottom: 6px; }
+.line { display: flex; align-items: baseline; gap: 8px; padding: 2px 0; }
+.line i { flex: 1; height: 4px; background-image: radial-gradient(circle, #9a9a9a 1.2px, transparent 1.4px); background-size: 8px 4px; background-repeat: repeat-x; transform: translateY(-3px); }
+.sum { display: flex; justify-content: space-between; background: var(--ink); color: #fff; padding: 8px 10px; margin-top: 8px; font-weight: 500; border-radius: 2px; }
+.fine { margin-top: 12px; font-size: 0.8125rem; color: var(--muted); }
+
+/* Findings */
+.findings { padding-block: var(--section-gap) 0; display: grid; gap: 72px; }
+.findHead { max-width: 760px; }
+.finding { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(24px, 5vw, 80px); align-items: center; }
+.finding > div:first-child { display: grid; gap: 14px; align-content: start; max-width: 46ch; }
+.flip > div:first-child { order: 2; }
+.fig { background: var(--surface); padding: 18px; border-radius: var(--radius); }
+.tag { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; font-size: 0.8125rem; }
+.more { margin-top: -16px; }
+
+/* Open by default: tiles */
+.tiles { padding-block: var(--section-gap) 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.tile { aspect-ratio: 3 / 2; background: var(--surface); border-radius: var(--radius); padding: 24px; display: grid; align-content: space-between; gap: 12px; }
+.tileHead { grid-column: span 2; aspect-ratio: auto; background: var(--accent); }
+.tileHead h2 { font-size: clamp(2rem, 3vw, 3rem); }
+.tname { font-size: clamp(1.375rem, 1.6vw, 1.75rem); font-weight: 500; letter-spacing: -0.03em; line-height: 1.05; }
+.tbody { font-size: 0.9375rem; }
+
+/* Technology */
+.tech { padding-block: var(--section-gap) 0; }
+.techHead { max-width: 760px; margin-bottom: 56px; }
+.techList { list-style: none; margin: 0; padding: 0; display: grid; gap: 40px; }
+.techRow { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(24px, 5vw, 80px); align-items: start; }
+.techText { display: grid; gap: 10px; max-width: 44ch; }
+.techFrag { display: grid; gap: 10px; justify-items: start; padding: 18px 20px; background: var(--surface); border-radius: var(--radius); }
+.techRow:nth-child(1) .techFrag { background: var(--field-2); color: var(--field-2-ink); }
+.techRow:nth-child(4) .techFrag { background: transparent; box-shadow: inset 0 0 0 1px #d6d6d6; }
+.techSee { font-size: 0.8125rem; opacity: 0.75; }
+.techFrag pre { margin: 0; white-space: pre-wrap; word-break: break-word; }
+.techRow:nth-child(2) .techFrag { margin-right: 18%; }
+.techRow:nth-child(3) .techFrag { margin-left: 10%; }
+
+@media (max-width: 900px) {
+  .receipt { grid-template-columns: 1fr; gap: 40px; min-height: 0; }
+  .receiptLeft, .slip { grid-column: 1; }
+  .total { font-size: 34vw; }
+  .slip { max-width: none; }
+  .finding, .techRow { grid-template-columns: 1fr; }
+  .flip > div:first-child { order: 0; }
+  .tiles { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .tileHead { grid-column: 1 / -1; min-height: 120px; }
+  .tile { aspect-ratio: auto; min-height: 150px; padding: 16px; }
+  .techRow:nth-child(n) .techFrag { margin: 0; }
+}

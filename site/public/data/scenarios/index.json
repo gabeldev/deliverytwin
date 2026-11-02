@@ -1,0 +1,106 @@
+{
+ "commit": "ab46db9",
+ "seed": 2026,
+ "scenarios": [
+  {
+   "id": "l2-2",
+   "level": "L2",
+   "index": 2,
+   "dataset_id": "ds_9565ff3921",
+   "profile": "customer",
+   "alert": {
+    "t": 290.0,
+    "series": "global",
+    "metric": "bad_order_rate",
+    "score": 0.1722
+   },
+   "agents": [
+    "gpt-5-mini",
+    "gpt-5.6-luna",
+    "playbook",
+    "qwen-base",
+    "qwen-sft"
+   ]
+  },
+  {
+   "id": "l2-0",
+   "level": "L2",
+   "index": 0,
+   "dataset_id": "ds_57939326e7",
+   "profile": "customer",
+   "alert": {
+    "t": 285.0,
+    "series": "global",
+    "metric": "bad_order_rate",
+    "score": 0.1742
+   },
+   "agents": [
+    "gpt-5-mini",
+    "gpt-5.6-luna",
+    "playbook",
+    "qwen-base",
+    "qwen-sft"
+   ]
+  },
+  {
+   "id": "l0-2",
+   "level": "L0",
+   "index": 2,
+   "dataset_id": "ds_91f3ee54f7",
+   "profile": "full",
+   "alert": {
+    "t": 295.0,
+    "series": "global",
+    "metric": "bad_order_rate",
+    "score": 0.2071
+   },
+   "agents": [
+    "gpt-5-mini",
+    "gpt-5.6-luna",
+    "playbook",
+    "qwen-base",
+    "qwen-sft"
+   ]
+  },
+  {
+   "id": "l0-3",
+   "level": "L0",
+   "index": 3,
+   "dataset_id": "ds_298b011b18",
+   "profile": "full",
+   "alert": {
+    "t": 290.0,
+    "series": "global",
+    "metric": "bad_order_rate",
+    "score": 0.2
+   },
+   "agents": [
+    "gpt-5-mini",
+    "gpt-5.6-luna",
+    "playbook",
+    "qwen-base",
+    "qwen-sft"
+   ]
+  },
+  {
+   "id": "l0-1",
+   "level": "L0",
+   "index": 1,
+   "dataset_id": "ds_ff92579186",
+   "profile": "full",
+   "alert": {
+    "t": 290.0,
+    "series": "r_01c794fe74",
+    "metric": "bad_order_rate",
+    "score": 0.7143
+   },
+   "agents": [
+    "gpt-5-mini",
+    "gpt-5.6-luna",
+    "playbook",
+    "qwen-base",
+    "qwen-sft"
+   ]
+  }
+ ]
+}

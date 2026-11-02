@@ -1,0 +1,855 @@
+{
+ "seed": "final 515151",
+ "n_per_level": 20,
+ "sources": {
+  "runs": "runs/g3/*/results.jsonl (recomputed)",
+  "g5": "docs/reports/G5_REPORT_DATA.json",
+  "interventions": "docs/reports/G5_INTERVENTIONS.json",
+  "gsm8k": "docs/reports/G4_GENERAL_CHECK.json"
+ },
+ "levels": {
+  "rules": {
+   "name": "Observational rules",
+   "kind": "baseline",
+   "run": "rules_final_fix",
+   "L0": {
+    "n": 20,
+    "k": 10,
+    "acc": 0.5,
+    "ci": [
+     0.299,
+     0.701
+    ],
+    "abstain": 0.05,
+    "experiments": 0.0
+   },
+   "L1": {
+    "n": 20,
+    "k": 14,
+    "acc": 0.7,
+    "ci": [
+     0.481,
+     0.855
+    ],
+    "abstain": 0.0,
+    "experiments": 0.0
+   },
+   "L2": {
+    "n": 20,
+    "k": 0,
+    "acc": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "abstain": 0.65,
+    "experiments": 0.0
+   }
+  },
+  "playbook": {
+   "name": "Playbook + experiment",
+   "kind": "baseline",
+   "run": "playbook_final_fix",
+   "L0": {
+    "n": 20,
+    "k": 10,
+    "acc": 0.5,
+    "ci": [
+     0.299,
+     0.701
+    ],
+    "abstain": 0.0,
+    "experiments": 0.05
+   },
+   "L1": {
+    "n": 20,
+    "k": 14,
+    "acc": 0.7,
+    "ci": [
+     0.481,
+     0.855
+    ],
+    "abstain": 0.0,
+    "experiments": 0.0
+   },
+   "L2": {
+    "n": 20,
+    "k": 13,
+    "acc": 0.65,
+    "ci": [
+     0.433,
+     0.819
+    ],
+    "abstain": 0.0,
+    "experiments": 1.25
+   }
+  },
+  "gpt-5-nano": {
+   "name": "gpt-5-nano",
+   "kind": "api-llm",
+   "run": "llm-gpt-5-nano_final_fix",
+   "L0": {
+    "n": 20,
+    "k": 5,
+    "acc": 0.25,
+    "ci": [
+     0.112,
+     0.469
+    ],
+    "abstain": 0.3,
+    "experiments": 1.35
+   },
+   "L1": {
+    "n": 20,
+    "k": 8,
+    "acc": 0.4,
+    "ci": [
+     0.219,
+     0.613
+    ],
+    "abstain": 0.05,
+    "experiments": 1.25
+   },
+   "L2": {
+    "n": 20,
+    "k": 2,
+    "acc": 0.1,
+    "ci": [
+     0.028,
+     0.301
+    ],
+    "abstain": 0.05,
+    "experiments": 1.55
+   }
+  },
+  "gpt-5-mini": {
+   "name": "gpt-5-mini",
+   "kind": "api-llm",
+   "run": "llm-gpt-5-mini_final_fix",
+   "L0": {
+    "n": 20,
+    "k": 18,
+    "acc": 0.9,
+    "ci": [
+     0.699,
+     0.972
+    ],
+    "abstain": 0.0,
+    "experiments": 1.5
+   },
+   "L1": {
+    "n": 20,
+    "k": 15,
+    "acc": 0.75,
+    "ci": [
+     0.531,
+     0.888
+    ],
+    "abstain": 0.0,
+    "experiments": 1.85
+   },
+   "L2": {
+    "n": 20,
+    "k": 6,
+    "acc": 0.3,
+    "ci": [
+     0.145,
+     0.519
+    ],
+    "abstain": 0.0,
+    "experiments": 2.3
+   }
+  },
+  "gpt-5.6-luna": {
+   "name": "gpt-5.6-luna",
+   "kind": "api-llm",
+   "run": "llm-gpt-5.6-luna_final_fix",
+   "L0": {
+    "n": 20,
+    "k": 16,
+    "acc": 0.8,
+    "ci": [
+     0.584,
+     0.919
+    ],
+    "abstain": 0.1,
+    "experiments": 2.0
+   },
+   "L1": {
+    "n": 20,
+    "k": 15,
+    "acc": 0.75,
+    "ci": [
+     0.531,
+     0.888
+    ],
+    "abstain": 0.05,
+    "experiments": 2.05
+   },
+   "L2": {
+    "n": 20,
+    "k": 0,
+    "acc": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "abstain": 0.6,
+    "experiments": 1.85
+   }
+  },
+  "qwen-base": {
+   "name": "Qwen3-1.7B base",
+   "kind": "local",
+   "run": "local-qwen3-1.7b_final_g4",
+   "L0": {
+    "n": 20,
+    "k": 1,
+    "acc": 0.05,
+    "ci": [
+     0.009,
+     0.236
+    ],
+    "abstain": 0.9,
+    "experiments": 1.1
+   },
+   "L1": {
+    "n": 20,
+    "k": 0,
+    "acc": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "abstain": 0.9,
+    "experiments": 1.5
+   },
+   "L2": {
+    "n": 20,
+    "k": 0,
+    "acc": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "abstain": 0.85,
+    "experiments": 1.05
+   }
+  },
+  "qwen-sft": {
+   "name": "Qwen3-1.7B + LoRA (ours)",
+   "kind": "local",
+   "run": "local-qwen3-1.7b-sft_final_g4",
+   "L0": {
+    "n": 20,
+    "k": 9,
+    "acc": 0.45,
+    "ci": [
+     0.258,
+     0.658
+    ],
+    "abstain": 0.0,
+    "experiments": 0.0
+   },
+   "L1": {
+    "n": 20,
+    "k": 8,
+    "acc": 0.4,
+    "ci": [
+     0.219,
+     0.613
+    ],
+    "abstain": 0.0,
+    "experiments": 0.0
+   },
+   "L2": {
+    "n": 20,
+    "k": 18,
+    "acc": 0.9,
+    "ci": [
+     0.699,
+     0.972
+    ],
+    "abstain": 0.0,
+    "experiments": 1.7
+   }
+  }
+ },
+ "l2_pairs": {
+  "rules": {
+   "n": 20,
+   "only_first": 18,
+   "only_second": 0,
+   "p": 0.0
+  },
+  "playbook": {
+   "n": 20,
+   "only_first": 6,
+   "only_second": 1,
+   "p": 0.125
+  },
+  "gpt-5-nano": {
+   "n": 20,
+   "only_first": 16,
+   "only_second": 0,
+   "p": 0.0
+  },
+  "gpt-5-mini": {
+   "n": 20,
+   "only_first": 13,
+   "only_second": 1,
+   "p": 0.0018
+  },
+  "gpt-5.6-luna": {
+   "n": 20,
+   "only_first": 18,
+   "only_second": 0,
+   "p": 0.0
+  },
+  "qwen-base": {
+   "n": 20,
+   "only_first": 18,
+   "only_second": 0,
+   "p": 0.0
+  }
+ },
+ "experiment_ablation": {
+  "with": {
+   "n": 20,
+   "exact": 0.9,
+   "ci": [
+    0.699,
+    0.972
+   ]
+  },
+  "without": {
+   "n": 20,
+   "exact": 0.45,
+   "ci": [
+    0.258,
+    0.658
+   ]
+  },
+  "paired": {
+   "status": "ok",
+   "label": "principal",
+   "n": 20,
+   "only_first": 11,
+   "only_second": 2,
+   "mcnemar_p": 0.0225
+  },
+  "label": "pre-registered (H1/H9)",
+  "source": "G5_REPORT_DATA.json:h1_h9_sft_l2"
+ },
+ "matched_ladder": {
+  "L2_mode_A": {
+   "rules": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "abstained": 0.65,
+    "experiments_mean": 0.0
+   },
+   "playbook": {
+    "exact": 0.65,
+    "ci": [
+     0.433,
+     0.819
+    ],
+    "abstained": 0.0,
+    "experiments_mean": 1.25
+   },
+   "qwen-base": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "abstained": 0.85,
+    "experiments_mean": 1.05
+   },
+   "qwen-sft": {
+    "exact": 0.9,
+    "ci": [
+     0.699,
+     0.972
+    ],
+    "abstained": 0.0,
+    "experiments_mean": 1.7
+   }
+  },
+  "L4_budgets": {
+   "rules": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "abstained": 0.65,
+    "experiments_mean": 0.0
+   },
+   "playbook": {
+    "exact": 0.35,
+    "ci": [
+     0.181,
+     0.567
+    ],
+    "abstained": 0.3,
+    "experiments_mean": 0.65
+   },
+   "qwen-base": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "abstained": 1.0,
+    "experiments_mean": 0.15
+   },
+   "qwen-sft": {
+    "exact": 0.8,
+    "ci": [
+     0.584,
+     0.919
+    ],
+    "abstained": 0.0,
+    "experiments_mean": 1.0
+   }
+  },
+  "L6_twin_0.25": {
+   "rules": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "abstained": 0.65,
+    "experiments_mean": 0.0
+   },
+   "playbook": {
+    "exact": 0.45,
+    "ci": [
+     0.258,
+     0.658
+    ],
+    "abstained": 0.0,
+    "experiments_mean": 1.5
+   },
+   "qwen-base": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "abstained": 0.85,
+    "experiments_mean": 0.8
+   },
+   "qwen-sft": {
+    "exact": 0.95,
+    "ci": [
+     0.764,
+     0.991
+    ],
+    "abstained": 0.0,
+    "experiments_mean": 1.8
+   }
+  },
+  "source": "G5_REPORT_DATA.json:matched_ladder_on_l2_instances"
+ },
+ "ladder": {
+  "rules": {
+   "L4": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "experiments_mean": 0.0
+   },
+   "L5": {
+    "exact": 0.3,
+    "ci": [
+     0.145,
+     0.519
+    ],
+    "experiments_mean": 0.0
+   },
+   "L6": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "experiments_mean": 0.0
+   }
+  },
+  "playbook": {
+   "L4": {
+    "exact": 0.3,
+    "ci": [
+     0.145,
+     0.519
+    ],
+    "experiments_mean": 0.8
+   },
+   "L5": {
+    "exact": 0.65,
+    "ci": [
+     0.433,
+     0.819
+    ],
+    "experiments_mean": 1.05
+   },
+   "L6": {
+    "exact": 0.5,
+    "ci": [
+     0.299,
+     0.701
+    ],
+    "experiments_mean": 1.45
+   }
+  },
+  "qwen-base": {
+   "L4": {
+    "exact": 0.1,
+    "ci": [
+     0.028,
+     0.301
+    ],
+    "experiments_mean": 0.05
+   },
+   "L5": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "experiments_mean": 1.0
+   },
+   "L6": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "experiments_mean": 0.75
+   }
+  },
+  "qwen-sft": {
+   "L4": {
+    "exact": 0.7,
+    "ci": [
+     0.481,
+     0.855
+    ],
+    "experiments_mean": 1.0
+   },
+   "L5": {
+    "exact": 0.4,
+    "ci": [
+     0.219,
+     0.613
+    ],
+    "experiments_mean": 0.0
+   },
+   "L6": {
+    "exact": 0.95,
+    "ci": [
+     0.764,
+     0.991
+    ],
+    "experiments_mean": 1.9
+   }
+  },
+  "gpt-5-mini": {
+   "L4": {
+    "exact": 0.0,
+    "ci": [
+     -0.0,
+     0.161
+    ],
+    "experiments_mean": 1.0
+   },
+   "L5": {
+    "exact": 0.8,
+    "ci": [
+     0.584,
+     0.919
+    ],
+    "experiments_mean": 1.65
+   },
+   "L6": {
+    "exact": 0.3,
+    "ci": [
+     0.145,
+     0.519
+    ],
+    "experiments_mean": 2.35
+   }
+  },
+  "gpt-5.6-luna": {
+   "L4": {
+    "exact": 0.05,
+    "ci": [
+     0.009,
+     0.236
+    ],
+    "experiments_mean": 1.0
+   },
+   "L5": {
+    "exact": 0.9,
+    "ci": [
+     0.699,
+     0.972
+    ],
+    "experiments_mean": 2.3
+   },
+   "L6": {
+    "exact": 0.15,
+    "ci": [
+     0.052,
+     0.36
+    ],
+    "experiments_mean": 2.05
+   }
+  },
+  "source": "G5_REPORT_DATA.json:ladder_l3_l6, addendum_a1_api"
+ },
+ "twin_sweep": {
+  "mode_A": {
+   "exact": 0.65,
+   "ci": [
+    0.433,
+    0.819
+   ],
+   "rec_diff_bad": -0.0991,
+   "vs_A_p": 1.0
+  },
+  "delta_0": {
+   "exact": 0.65,
+   "ci": [
+    0.433,
+    0.819
+   ],
+   "rec_diff_bad": -0.0991,
+   "vs_A_p": 1.0
+  },
+  "delta_0.1": {
+   "exact": 0.45,
+   "ci": [
+    0.258,
+    0.658
+   ],
+   "rec_diff_bad": -0.0537,
+   "vs_A_p": 0.125
+  },
+  "delta_0.25": {
+   "exact": 0.45,
+   "ci": [
+    0.258,
+    0.658
+   ],
+   "rec_diff_bad": -0.0541,
+   "vs_A_p": 0.125
+  },
+  "delta_0.5": {
+   "exact": 0.4,
+   "ci": [
+    0.219,
+    0.613
+   ],
+   "rec_diff_bad": -0.0371,
+   "vs_A_p": 0.0625
+  }
+ },
+ "interventions": {
+  "n_incidents": 60,
+  "replicas": 20,
+  "placebo_all_exactly_zero": true,
+  "variance_ratio": {
+   "add_couriers_5": {
+    "n": 50,
+    "median": 0.058,
+    "q25": 0.0147,
+    "q75": 0.1814,
+    "share_below_1": 0.96
+   },
+   "add_couriers_10": {
+    "n": 50,
+    "median": 0.1092,
+    "q25": 0.0275,
+    "q75": 0.2666,
+    "share_below_1": 1.0
+   },
+   "workers_4": {
+    "n": 59,
+    "median": 0.0561,
+    "q25": 0.01,
+    "q75": 0.5541,
+    "share_below_1": 0.831
+   },
+   "workers_6": {
+    "n": 60,
+    "median": 0.0569,
+    "q25": 0.01,
+    "q75": 0.5769,
+    "share_below_1": 0.8
+   },
+   "retry_backoff_0.2": {
+    "n": 50,
+    "median": 0.1134,
+    "q25": 0.0149,
+    "q75": 0.4672,
+    "share_below_1": 0.96
+   },
+   "policy_eta_aware": {
+    "n": 50,
+    "median": 0.0284,
+    "q25": 0.0194,
+    "q75": 0.0513,
+    "share_below_1": 1.0
+   },
+   "admission_0.9": {
+    "n": 50,
+    "median": 0.1798,
+    "q25": 0.1239,
+    "q75": 0.2866,
+    "share_below_1": 0.96
+   },
+   "admission_0.8": {
+    "n": 50,
+    "median": 0.2972,
+    "q25": 0.2117,
+    "q75": 0.5387,
+    "share_below_1": 0.94
+   }
+  },
+  "regret_common_oracle": {
+   "remedy": {
+    "n": 60,
+    "mean": 0.0434,
+    "median": 0.0095,
+    "share_within_0.02": 0.617
+   },
+   "playbook": {
+    "n": 60,
+    "mean": 0.1685,
+    "median": 0.0303,
+    "share_within_0.02": 0.433
+   },
+   "gpt-5-mini": {
+    "n": 41,
+    "mean": 0.0563,
+    "median": 0.0,
+    "share_within_0.02": 0.659
+   },
+   "gpt-5.6-luna": {
+    "n": 52,
+    "mean": 0.1267,
+    "median": 0.0222,
+    "share_within_0.02": 0.5
+   },
+   "qwen-sft": {
+    "n": 60,
+    "mean": 0.1899,
+    "median": 0.0117,
+    "share_within_0.02": 0.567
+   },
+   "qwen-base": {
+    "n": 60,
+    "mean": 0.2812,
+    "median": 0.203,
+    "share_within_0.02": 0.25
+   }
+  },
+  "infeasible": {
+   "playbook": 0,
+   "gpt-5-mini": 19,
+   "gpt-5.6-luna": 8,
+   "qwen-sft": 0,
+   "qwen-base": 0
+  },
+  "best_action_counts_by_family": {
+   "courier_scarcity": {
+    "add_couriers_10": 12
+   },
+   "dispatcher_saturation": {
+    "workers_6": 10
+   },
+   "restaurant_bottleneck": {
+    "add_couriers_10": 18
+   },
+   "dispatch_latency": {
+    "policy_eta_aware": 7,
+    "add_couriers_10": 2
+   },
+   "dispatch_error_surge": {
+    "retry_backoff_0.2": 11
+   }
+  },
+  "mean_pareto_size": 2.82
+ },
+ "gsm8k": {
+  "n": 150,
+  "base_strict": 0.6067,
+  "sft_strict": 0.14,
+  "base_last_number": 0.673,
+  "sft_last_number": 0.447
+ },
+ "names_only": {
+  "L0": {
+   "acc": 0.2,
+   "majority": 0.15
+  },
+  "L1": {
+   "acc": 0.4,
+   "majority": 0.5
+  },
+  "L2": {
+   "acc": 0.45,
+   "majority": 0.45
+  }
+ },
+ "receipt": {
+  "groups": {
+   "API LLMs": [
+    {
+     "agent": "llm-gpt-5-mini",
+     "n": 255
+    },
+    {
+     "agent": "llm-gpt-5-nano",
+     "n": 211
+    },
+    {
+     "agent": "llm-gpt-5.6-luna",
+     "n": 275
+    }
+   ],
+   "Baselines": [
+    {
+     "agent": "playbook",
+     "n": 360
+    },
+    {
+     "agent": "rules",
+     "n": 300
+    }
+   ],
+   "Qwen3-1.7B (local)": [
+    {
+     "agent": "local-qwen3-1.7b",
+     "n": 160
+    },
+    {
+     "agent": "local-qwen3-1.7b-sft",
+     "n": 180
+    }
+   ]
+  },
+  "total": 1741,
+  "note": "Every evaluated investigation recorded under runs/g3: all seeds, including development, ablation and superseded pre-fix runs (reported numbers use the post-fix runs only); invalid pre-fix L3 rows excluded"
+ }
+}
