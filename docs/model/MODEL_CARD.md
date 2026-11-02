@@ -11,7 +11,7 @@ language: [en]
 
 # DeliveryTwin investigator — Qwen3-1.7B QLoRA adapter (research artifact)
 
-**Status:** pesquisa. Publicado em 2026-11-02 (Apache-2.0): https://huggingface.co/gabeldev/deliverytwin-investigator-qwen3-1.7b-lora (cartão em inglês). **Ambiente simulado**; nenhuma relação com operação real de qualquer empresa.
+**Status:** pesquisa. Publicado em 2026-11-02 (Apache-2.0): https://huggingface.co/gabeldev/deliverytwin-investigator-qwen3-1.7b-lora (cartão em inglês). Código: https://github.com/gabeldev/deliverytwin **Ambiente simulado**; nenhuma relação com operação real de qualquer empresa.
 
 ## O que é
 
