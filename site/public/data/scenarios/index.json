@@ -103,5 +103,5 @@
    ]
   }
  ],
- "commit_note": "Public snapshot gabeldev/deliverytwin@670384d regenerates these files byte-identically (provenance fields aside); originally exported from private commit ab46db9 with an identical simulator."
+ "commit_note": "From the public snapshot gabeldev/deliverytwin@670384d the exporter regenerates the world, every lab result, the playbook session and all evaluator verdicts; with the (unpublished) recorded LLM session bundles present, all 11 files were byte-identical apart from provenance. First exported from private commit ab46db9 with an identical simulator."
 }

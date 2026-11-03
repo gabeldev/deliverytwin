@@ -3,6 +3,7 @@ import type { Dict, Locale } from "@/lib/i18n";
 import type { Research, Scenario, Truth } from "@/lib/types";
 import { AccuracyRows } from "../charts";
 import Status from "../ui/Status";
+import CountUp from "../ui/CountUp";
 import x from "./sections.module.css";
 
 const fmt = (n: number, l: Locale) => n.toLocaleString(l === "pt" ? "pt-BR" : "en-US");
@@ -16,7 +17,7 @@ export function Receipt({ r, t, locale }: { r: Research; t: Dict; locale: Locale
           <p className={x.note}>{t.receipt.note}</p>
         </div>
         <div className="rise">
-          <p className={`${x.total} tnum`}>{fmt(r.receipt.total, locale)}</p>
+          <p className={`${x.total} tnum`}><CountUp value={r.receipt.total} locale={locale} /></p>
           <p className={x.cap}>{t.receipt.caption}</p>
         </div>
       </div>

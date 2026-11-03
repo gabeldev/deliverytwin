@@ -18,6 +18,7 @@ import json
 import math
 import statistics
 import subprocess
+import sys
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
@@ -232,6 +233,9 @@ def sessions(inst) -> dict:
     for name, (run, kind, label) in SESSION_RUNS.items():
         f = ROOT / "runs" / "g3" / run / "bundles" / f"{inst.public.dataset_id}.json"
         if not f.exists():
+            # Recorded LLM sessions are not part of the public repository; say so instead of dropping them silently.
+            print(f"warning: no recorded session '{name}' for {inst.public.dataset_id} ({f.parent} missing); skipped",
+                  file=sys.stderr)
             continue
         b = json.loads(f.read_text())
         out[name] = {"kind": kind, "label": label, "run": run, "steps": _steps(b["transcript"]),

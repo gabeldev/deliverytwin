@@ -3,7 +3,7 @@ import type { Locale } from "./i18n";
 const en = {
   title: "Interactive lab",
   lead: "Pick an incident from the simulated city. Watch it unfold, follow an agent's investigation, compare decisions in paired futures, then reveal the hidden cause.",
-  precomputed: "Everything here was computed ahead of time by the simulator and is replayed in your browser: no model and no simulation run live on this page. Each result is labelled with the public commit and command that regenerate it.",
+  precomputed: "Everything here was computed ahead of time and is replayed in your browser: no model and no simulation run live on this page. The world, the lab results and the playbook regenerate from the public commit shown; the language-model sessions are published recordings.",
   incident: "Incident",
   pickIncident: "Choose an incident",
   level: { L0: "full gauges", L1: "full gauges + noise", L2: "customer view only" } as Record<string, string>,
@@ -83,7 +83,7 @@ export type LabDict = typeof en;
 const pt: LabDict = {
   title: "Laboratório interativo",
   lead: "Escolha um incidente da cidade simulada. Veja o incidente acontecer, acompanhe a investigação de um agente, compare decisões em futuros pareados e revele a causa oculta.",
-  precomputed: "Tudo aqui foi calculado antes pelo simulador e é reproduzido no seu navegador: nenhum modelo e nenhuma simulação rodam ao vivo nesta página. Cada resultado traz o commit público e o comando que o regeneram.",
+  precomputed: "Tudo aqui foi calculado antes e é reproduzido no seu navegador: nenhum modelo e nenhuma simulação rodam ao vivo nesta página. O mundo, os resultados do laboratório e o playbook se regeneram a partir do commit público indicado; as sessões dos modelos de linguagem são gravações publicadas.",
   incident: "Incidente",
   pickIncident: "Escolha um incidente",
   level: { L0: "medidores completos", L1: "medidores + ruído", L2: "só visão do cliente" },

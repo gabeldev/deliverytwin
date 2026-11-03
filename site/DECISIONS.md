@@ -39,8 +39,9 @@ Rebuild the data after any change to the simulator, agents or reports, then rebu
 ## 4. Pending and possible extensions
 
 - **Shared rate limit for the contact form.** The current limit is per serverless instance; a shared limiter needs a KV store (Upstash/Vercel KV). Mitigations today: 4 KB streamed body cap, honeypot, consent required, private storage (Codex site review #3).
-- **Arrow-key navigation in custom radio groups** (incident, agent and lab-mode pickers); Tab and Enter/Space work (review #17).
-- **Content-Security-Policy header**, to be introduced in report-only mode first (review #20).
+- Done 2026-11-03: arrow-key navigation in the radio groups (`components/ui/radio.ts`, review #17) and a first-party Content-Security-Policy in `next.config.ts` (review #20; `'unsafe-inline'` remains for Next.js inline scripts and styles, a nonce-based policy would remove it).
+- Done 2026-11-03: small-screen menu with an always-visible language switch that keeps the current page; the hero becomes stacked cards on small screens (no pinned scrolling) and narrates the map (legend, focus ring on the busiest restaurant, synchronised captions, time-to-alert bar).
+- English version of the sample Decision Audit report (the report generator is Portuguese-only today).
 
 - Live counterfactual runs (Pyodide or a small Python service) for arbitrary intervention values; today values snap to the precomputed grid and the snap is shown.
 - More scenarios (L4–L6 and L3) in the lab; today five L0/L2 incidents with recorded sessions for every agent.

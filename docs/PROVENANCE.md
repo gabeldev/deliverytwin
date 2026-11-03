@@ -7,7 +7,7 @@ The interactive site (`site/`) shows precomputed results. Each result is labelle
 | Data files | `site/public/data/scenarios/*.json`, `site/public/data/research.json` |
 | Public snapshot that regenerates them | `gabeldev/deliverytwin@670384d` |
 | Command | `uv run python scripts/site_export.py` (5 scenarios, dev seed 2026, replicas 3001–3020) |
-| Check performed (2026-11-03) | Re-exported from a clean copy of the public snapshot: all 11 scenario files are byte-identical to the published ones, apart from the provenance label. |
+| Check performed (2026-11-03) | Re-exported from a clean copy of the public snapshot **with the recorded LLM session bundles added** (they are not published): all 11 scenario files were byte-identical to the published ones, apart from the provenance label. From the public repository alone, the exporter regenerates everything except the recorded LLM sessions (it warns and skips them). |
 
 ## History
 

@@ -9,6 +9,7 @@ import { armName } from "@/lib/names";
 import type { Scenario } from "@/lib/types";
 import { EffectPlot, LineChart } from "../charts";
 import Status, { SourceTag } from "../ui/Status";
+import { onRadioKeys } from "../ui/radio";
 import l from "./lab.module.css";
 
 const GROUPS: { kind: string; en: string; pt: string }[] = [
@@ -45,9 +46,9 @@ export default function CounterfactualLab({ sc, t, locale, commit }: { sc: Scena
           <h2 className={l.h2}>{t.labTitle}</h2>
           <p className={l.note}>{t.labLead}</p>
         </div>
-        <div className={l.modes} role="radiogroup" aria-label="Lab mode" data-ui>
+        <div className={l.modes} role="radiogroup" aria-label="Lab mode" data-ui onKeyDown={onRadioKeys}>
           {(["A", "B"] as const).map((m) => (
-            <button key={m} type="button" role="radio" aria-checked={mode === m} data-on={mode === m ? "1" : undefined} className={l.modeBtn} onClick={() => setMode(m)}>
+            <button key={m} type="button" role="radio" aria-checked={mode === m} tabIndex={mode === m ? 0 : -1} data-on={mode === m ? "1" : undefined} className={l.modeBtn} onClick={() => setMode(m)}>
               {m === "A" ? t.modeA : t.modeB}
             </button>
           ))}

@@ -55,11 +55,26 @@ export function statsAt(world: World, t: number, promise: number) {
   return { active, late, waiting, moving };
 }
 
+/** The restaurant with the most orders waiting at time t (observable in the simulator view, not the hidden cause). */
+export function busiestAt(world: World, t: number, promise: number) {
+  const q = new Map<string, { n: number; late: number }>();
+  for (const o of world.orders) {
+    const d = orderAt(o, t, promise);
+    if (!d || (d.state !== "waiting" && d.state !== "at_rest")) continue;
+    const v = q.get(o.r) ?? { n: 0, late: 0 };
+    v.n++; if (d.late) v.late++;
+    q.set(o.r, v);
+  }
+  let best: { token: string; n: number; late: number } | null = null;
+  for (const [token, v] of q) if (!best || v.n > best.n) best = { token, ...v };
+  return best;
+}
+
 export default function CityMap({
-  world, promise, t, autoplay, range, speed = 6, onTime, label, highlight,
+  world, promise, t, autoplay, range, speed = 6, onTime, label, highlight, focusLabel,
 }: {
   world: World; promise: number; t?: number; autoplay?: boolean; range?: [number, number];
-  speed?: number; onTime?: (t: number) => void; label: string; highlight?: string | null;
+  speed?: number; onTime?: (t: number) => void; label: string; highlight?: string | null; focusLabel?: string;
 }) {
   const ref = useRef<HTMLCanvasElement>(null);
   const [size, setSize] = useState(480);
@@ -129,8 +144,22 @@ export default function CityMap({
         g.fillStyle = "#232323";
         g.fillRect(x - s / 2, y - s / 2, s, s);
         if (r.token === highlight) {
+          // Pulsing ring: draws the eye to where orders pile up (static when motion is reduced).
+          const k = reduced ? 0.5 : (Math.sin(performance.now() / 260) + 1) / 2;
           g.strokeStyle = LATE; g.lineWidth = 2;
-          g.strokeRect(x - s / 2 - 3, y - s / 2 - 3, s + 6, s + 6);
+          g.globalAlpha = 0.9 - 0.5 * k;
+          g.beginPath(); g.arc(x, y, s / 2 + 7 + 5 * k, 0, Math.PI * 2); g.stroke();
+          g.globalAlpha = 1;
+          if (focusLabel) {
+            g.font = "600 12px system-ui, sans-serif";
+            const w = g.measureText(focusLabel).width + 14;
+            const lx = Math.min(Math.max(x - w / 2, 4), size - w - 4);
+            const ly = y - s / 2 - 36 < 4 ? y + s / 2 + 14 : y - s / 2 - 34;
+            g.fillStyle = LATE;
+            g.beginPath(); g.roundRect(lx, ly, w, 22, 11); g.fill();
+            g.fillStyle = "#fff"; g.textBaseline = "middle";
+            g.fillText(focusLabel, lx + 7, ly + 11.5);
+          }
         }
       }
       for (const d of moving) {
@@ -163,7 +192,7 @@ export default function CityMap({
       raf = requestAnimationFrame(loop);
     }
     return () => cancelAnimationFrame(raf);
-  }, [world, promise, autoplay, range, speed, size, onTime, highlight]);
+  }, [world, promise, autoplay, range, speed, size, onTime, highlight, focusLabel]);
 
   return (
     <div ref={box} style={{ width: "100%" }}>

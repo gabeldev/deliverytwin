@@ -8,6 +8,7 @@ import Incident from "./Incident";
 import Investigation from "./Investigation";
 import CounterfactualLab from "./CounterfactualLab";
 import Conclusion from "./Conclusion";
+import { onRadioKeys } from "../ui/radio";
 import l from "./lab.module.css";
 
 export default function LabApp({ index, initial, locale }: { index: ScenarioIndex; initial: Scenario; locale: Locale }) {
@@ -64,9 +65,9 @@ export default function LabApp({ index, initial, locale }: { index: ScenarioInde
       </header>
 
       <div className={`${l.bar} wrap`} data-ui>
-        <div className={l.incidents} role="radiogroup" aria-label={t.pickIncident}>
+        <div className={l.incidents} role="radiogroup" aria-label={t.pickIncident} onKeyDown={onRadioKeys}>
           {index.scenarios.map((s) => (
-            <button key={s.id} type="button" role="radio" aria-checked={s.id === sc.id} className={l.inc} data-on={s.id === sc.id ? "1" : undefined}
+            <button key={s.id} type="button" role="radio" aria-checked={s.id === sc.id} tabIndex={s.id === sc.id ? 0 : -1} className={l.inc} data-on={s.id === sc.id ? "1" : undefined}
               onClick={() => void choose(s.id)} disabled={loading}>
               <b>{s.id.toUpperCase()}</b>
               <span>{t.level[s.level] ?? s.level} · {t.alertAt} {Math.round(s.alert.t)}</span>

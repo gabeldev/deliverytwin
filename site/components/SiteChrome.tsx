@@ -2,10 +2,10 @@ import Link from "next/link";
 import type { Dict, Locale } from "@/lib/i18n";
 import { CONTACT_EMAIL, HF, REPO } from "@/lib/site";
 import Reveal from "./Reveal";
+import { LangSwitch, NavMenu } from "./NavMenu";
 import s from "./chrome.module.css";
 
 export default function SiteChrome({ locale, t, children }: { locale: Locale; t: Dict; children: React.ReactNode }) {
-  const other = locale === "en" ? "pt" : "en";
   return (
     <>
       <a className={s.skip} href="#main">{locale === "pt" ? "Pular para o conteúdo" : "Skip to content"}</a>
@@ -15,13 +15,14 @@ export default function SiteChrome({ locale, t, children }: { locale: Locale; t:
       </div>
       <header className={`${s.nav} wrap`}>
         <Link href={`/${locale}`} className={s.word} aria-label={t.nav.home}>DeliveryTwin AI</Link>
-        <nav aria-label="Main" className={s.links}>
+        <nav aria-label="Main" className={`${s.links} ${s.desktopOnly}`}>
           <Link href={`/${locale}/lab`}>{t.nav.lab}</Link>
           <Link href={`/${locale}/research`}>{t.nav.research}</Link>
           <Link href={`/${locale}#technology`} className={s.hideSm}>{t.nav.technology}</Link>
-          <Link href={`/${other}`} hrefLang={other} lang={other === "pt" ? "pt-BR" : "en"} aria-label={t.nav.switchLabel}>{t.nav.switch}</Link>
+          <LangSwitch locale={locale} t={t} />
           <Link href={`/${locale}#audit`} className="btn btn-primary">{t.nav.access}</Link>
         </nav>
+        <NavMenu locale={locale} t={t} />
       </header>
       <main id="main">{children}</main>
       <footer className={`${s.footer} wrap`}>

@@ -7,6 +7,7 @@ import { familyName } from "@/lib/names";
 import type { Scenario, Step } from "@/lib/types";
 import Status, { SourceTag, type StatusKind } from "../ui/Status";
 import ToolText from "../ui/ToolText";
+import { onRadioKeys } from "../ui/radio";
 import l from "./lab.module.css";
 
 const OP_STATUS: Record<string, StatusKind> = { observe: "observation", query: "observation", hypothesize: "hypothesis", experiment: "experiment", submit: "recommendation" };
@@ -14,9 +15,9 @@ export const AGENT_ORDER = ["playbook", "qwen-sft", "qwen-base", "gpt-5-mini", "
 
 export function AgentPicker({ sc, agent, setAgent, t }: { sc: Scenario; agent: string; setAgent: (a: string) => void; t: LabDict }) {
   return (
-    <div className={l.agents} role="radiogroup" aria-label={t.agent}>
+    <div className={l.agents} role="radiogroup" aria-label={t.agent} onKeyDown={onRadioKeys}>
       {AGENT_ORDER.filter((a) => sc.sessions[a]).map((a) => (
-        <button key={a} type="button" role="radio" aria-checked={a === agent} className={l.agentBtn} data-on={a === agent ? "1" : undefined} onClick={() => setAgent(a)}>
+        <button key={a} type="button" role="radio" aria-checked={a === agent} tabIndex={a === agent ? 0 : -1} className={l.agentBtn} data-on={a === agent ? "1" : undefined} onClick={() => setAgent(a)}>
           <b>{sc.sessions[a].label.split(" (")[0]}</b>
           <SourceTag kind={sc.sessions[a].kind} text={t.agentKinds[sc.sessions[a].kind]} />
         </button>
