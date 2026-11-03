@@ -21,7 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: t.meta.description,
     metadataBase: new URL(process.env.SITE_URL ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "https://deliverytwin-puce.vercel.app")),
     alternates: { languages: { en: "/en", pt: "/pt" } },
-    openGraph: { title: t.meta.title, description: t.meta.description, type: "website" },
+    openGraph: { title: t.meta.title, description: t.meta.description, type: "website", url: `/${locale}`, siteName: "DeliveryTwin AI",
+      locale: locale === "pt" ? "pt_BR" : "en_US" },
+    twitter: { card: "summary_large_image", title: t.meta.title, description: t.meta.description },
     robots: { index: true, follow: true },
   };
 }

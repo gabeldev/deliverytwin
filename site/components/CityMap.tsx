@@ -156,7 +156,9 @@ export default function CityMap({
             const lx = Math.min(Math.max(x - w / 2, 4), size - w - 4);
             const ly = y - s / 2 - 36 < 4 ? y + s / 2 + 14 : y - s / 2 - 34;
             g.fillStyle = LATE;
-            g.beginPath(); g.roundRect(lx, ly, w, 22, 11); g.fill();
+            g.beginPath();
+            if (typeof g.roundRect === "function") g.roundRect(lx, ly, w, 22, 11); else g.rect(lx, ly, w, 22); // iOS < 16
+            g.fill();
             g.fillStyle = "#fff"; g.textBaseline = "middle";
             g.fillText(focusLabel, lx + 7, ly + 11.5);
           }
