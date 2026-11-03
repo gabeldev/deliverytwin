@@ -24,6 +24,9 @@
 .who { font-size: 0.9375rem; color: var(--muted); }
 .who a { color: var(--ink); text-underline-offset: 0.2em; overflow-wrap: anywhere; }
 
+.sample { display: grid; gap: 6px; justify-items: start; }
+.sample p { font-size: 0.9375rem; color: var(--muted); max-width: 56ch; }
+
 @media (max-width: 900px) {
   .section { grid-template-columns: 1fr; }
   .steps, .side { grid-column: 1; }

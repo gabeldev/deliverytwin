@@ -35,6 +35,10 @@ export default function Offer({ t }: { t: Dict }) {
         <h3 className={o.h3}>{f.notHeading}</h3>
         <ul className={o.not}>{f.not.map((x) => <li key={x}>{x}</li>)}</ul>
         <p className={o.caveat}>{f.caveat}</p>
+        <div className={o.sample}>
+          <a href="/sample/decision-audit-exemplo.html" className="btn btn-quiet">{f.sample} →</a>
+          <p>{f.sampleNote}</p>
+        </div>
         <a href="#access" className="btn btn-primary">{f.cta}</a>
         <p className={o.who}>{f.who} · <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
       </div>

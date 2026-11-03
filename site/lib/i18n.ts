@@ -134,6 +134,8 @@ const en = {
     ],
     caveat: "The demo on this site uses synthetic data. Results on a real operation depend on that operation's data.",
     cta: "Talk about an operational problem",
+    sample: "See a sample report",
+    sampleNote: "Fictitious data, in Portuguese. It shows exactly what an audit delivers, including a trap it catches: a late rate that improves because the promised time was stretched.",
     who: "Run by Gabriel Oliveira de Jesus",
   },
   contact: {
@@ -308,6 +310,8 @@ const pt: Dict = {
     ],
     caveat: "A demonstração deste site usa dados sintéticos. Resultados numa operação real dependem dos dados dessa operação.",
     cta: "Conversar sobre um problema operacional",
+    sample: "Veja um relatório de exemplo",
+    sampleNote: "Dados fictícios. Mostra exatamente o que um audit entrega, inclusive uma armadilha que ele pega: a taxa de atraso que melhora porque o prazo prometido foi esticado.",
     who: "Conduzido por Gabriel Oliveira de Jesus",
   },
   contact: {
