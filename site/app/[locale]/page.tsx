@@ -8,6 +8,7 @@ import HowItWorks from "@/components/home/HowItWorks";
 import { Findings, OpenTiles, Receipt, Technology } from "@/components/home/Sections";
 import Faq from "@/components/home/Faq";
 import Contact from "@/components/home/Contact";
+import Offer from "@/components/home/Offer";
 import m from "@/components/home/mobile.module.css";
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
@@ -21,6 +22,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <div className={`${m.lead} wrap`}>
         <p>{t.hero.lead}</p>
         <Link href={`/${locale}/lab`} className="btn btn-primary">{t.hero.cta}</Link>
+        <a href="#audit" className={m.business}>{t.hero.business} →</a>
       </div>
       <WhatIf lab={wi.lab.A} scenarioId={wi.id} t={t} locale={locale} commit={index.commit} />
       <HowItWorks sc={sc} truth={truth} t={t} locale={locale} />
@@ -28,6 +30,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <Findings r={research} t={t} locale={locale} />
       <Technology sc={sc} truth={truth} t={t} locale={locale} />
       <OpenTiles t={t} />
+      <Offer t={t} />
       <Faq t={t} />
       <Contact t={t} locale={locale} />
     </>

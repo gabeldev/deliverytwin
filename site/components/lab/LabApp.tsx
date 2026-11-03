@@ -60,6 +60,7 @@ export default function LabApp({ index, initial, locale }: { index: ScenarioInde
       <header className={`${l.head} wrap`}>
         <h1 className={l.h1}>{t.title}</h1>
         <p className={l.lead}>{t.lead}</p>
+        <p className={l.precomputed}>{t.precomputed}</p>
       </header>
 
       <div className={`${l.bar} wrap`} data-ui>

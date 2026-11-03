@@ -152,7 +152,7 @@ export function EffectPlot({
               <line x1={xs(r.hi)} x2={xs(r.hi)} y1={rowH / 2 - 5} y2={rowH / 2 + 5} className={c.ci} />
               <circle cx={xs(r.mean)} cy={rowH / 2} r={5} className={c.dot} />
             </svg>
-            <span className={`${c.effectVal} tnum`}>{format(r.mean)}<small>{format(r.lo)} to {format(r.hi)}</small></span>
+            <span className={`${c.effectVal} tnum`}>{format(r.mean)}<small>[{format(r.lo)}, {format(r.hi)}]</small></span>
           </Tag>
         );
       })}

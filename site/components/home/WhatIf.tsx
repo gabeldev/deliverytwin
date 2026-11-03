@@ -1,5 +1,6 @@
 "use client";
 
+import { REPO } from "@/lib/site";
 import { useMemo, useState } from "react";
 import type { Dict, Locale } from "@/lib/i18n";
 import type { Lab } from "@/lib/types";
@@ -52,7 +53,7 @@ export default function WhatIf({ lab, scenarioId, t, locale, commit }: { lab: La
               <span className="tnum muted">{t.whatif.rejected}: {pct(arm.treatment_rejected)}</span>
             </div>
             <p className={w.verdict}>{verdict}{snapped && (locale === "pt" ? ` Valor mais próximo calculado: ${parsed.used}.` : ` Nearest precomputed value: ${parsed.used}.`)}</p>
-            <p className={w.ctx}><SourceTag kind="precomputed" text={t.whatif.context.replace("{id}", scenarioId.toUpperCase()).replace("{n}", String(lab.replicas))} /> <span className="muted">commit {commit}</span></p>
+            <p className={w.ctx}><SourceTag kind="precomputed" text={t.whatif.context.replace("{id}", scenarioId.toUpperCase()).replace("{n}", String(lab.replicas))} /> <a className="muted" href={`${REPO}/tree/${commit}`}>commit {commit}</a></p>
           </>
         )}
       </div>

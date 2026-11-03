@@ -57,6 +57,8 @@ export default function Investigation({ sc, t, locale, agent, setAgent }: { sc: 
       <div className={l.invHead} data-ui>
         <AgentPicker sc={sc} agent={agent} setAgent={setAgent} t={t} />
         <p className={l.note}>{sess.kind === "recorded" ? t.replayNote : t.agentKinds.deterministic}{sess.run ? ` · run ${sess.run}` : ""}</p>
+        {sess.kind === "recorded" && <p className={l.note}>{t.protocolNote}</p>}
+        <p className={l.note}>{t.readHow}</p>
       </div>
       <div className={l.invBody}>
         <ol className={l.steplist} data-ui>
@@ -67,6 +69,7 @@ export default function Investigation({ sc, t, locale, agent, setAgent }: { sc: 
                 <code className={l.op}>{s.op}</code>
                 {!s.ok && <span className={l.err}>{locale === "pt" ? "erro de ferramenta" : "tool error"}</span>}
               </div>
+              {t.opLabel[s.op] && <p className={l.opLabel}>{t.opLabel[s.op]}</p>}
               {pretty(s.args) && (
                 <details open={s.op !== "submit"}>
                   <summary>{t.args}</summary>

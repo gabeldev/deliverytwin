@@ -348,12 +348,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--replicas", type=int, default=20)
     ap.add_argument("--workers", type=int, default=5)
+    ap.add_argument("--commit", help="commit label to record (use the PUBLIC snapshot commit that regenerates the data; "
+                    "see docs/PROVENANCE.md). Defaults to the current git HEAD.")
     a = ap.parse_args()
     if a.replicas < 2 or a.replicas > 20:
         ap.error("--replicas must be 2-20 (Student-t table in session.T95 covers df <= 19)")
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "scenarios").mkdir(exist_ok=True)
-    commit = _git_commit()
+    commit = a.commit or _git_commit()
     with ProcessPoolExecutor(a.workers) as ex:
         results = list(ex.map(export, [(s, a.replicas) for s in SCENARIOS]))
     index = []

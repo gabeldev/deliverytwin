@@ -24,6 +24,5 @@ export async function loadResearch(): Promise<Research> {
 
 export const FLAGSHIP = "l2-2";
 export const WHATIF = "l0-2";
-export const REPO = "https://github.com/gabeldev/deliverytwin";
-export const HF = "https://huggingface.co/gabeldev/deliverytwin-investigator-qwen3-1.7b-lora";
-export const blob = (p: string) => `${REPO}/blob/main/${p}`;
+
+export { REPO, HF, OWNER, CONTACT_EMAIL, PUBLIC_COMMIT, blob } from "./site";

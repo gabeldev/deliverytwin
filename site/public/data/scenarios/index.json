@@ -1,5 +1,5 @@
 {
- "commit": "ab46db9",
+ "commit": "670384d",
  "seed": 2026,
  "scenarios": [
   {
@@ -102,5 +102,6 @@
     "qwen-sft"
    ]
   }
- ]
+ ],
+ "commit_note": "Public snapshot gabeldev/deliverytwin@670384d regenerates these files byte-identically (provenance fields aside); originally exported from private commit ab46db9 with an identical simulator."
 }

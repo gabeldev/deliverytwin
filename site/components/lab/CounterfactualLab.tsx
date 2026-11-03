@@ -1,5 +1,6 @@
 "use client";
 
+import { REPO } from "@/lib/site";
 import { useMemo, useState } from "react";
 import { scaleLinear } from "d3-scale";
 import type { Locale } from "@/lib/i18n";
@@ -125,7 +126,7 @@ export default function CounterfactualLab({ sc, t, locale, commit }: { sc: Scena
       </section>
       <p className={l.prov}>
         <SourceTag kind="precomputed" text={t.provenance.replace("{seed}", String(sc.seed)).replace("{reps}", `${lab.replica_ids[0]}–${lab.replica_ids[1]}`).replace("{commit}", commit)} />
-        <span>{t.reproduce}: <code>{sc.provenance.command}</code></span>
+        <span>{t.reproduce}: <code>{sc.provenance.command}</code> · <a href={`${REPO}/tree/${commit}`}>{t.snapshot} {commit}</a></span>
       </p>
     </div>
   );

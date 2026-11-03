@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { Dict, Locale } from "@/lib/i18n";
+import { CONTACT_EMAIL } from "@/lib/site";
 import c from "./contact.module.css";
 
 type State = { kind: "idle" | "sending" | "ok" | "error"; msg?: string };
@@ -37,6 +38,7 @@ export default function Contact({ t, locale }: { t: Dict; locale: Locale }) {
       <form className={c.col} onSubmit={submit} noValidate>
         <h2 id="access-h" className={c.h}>{t.contact.heading}</h2>
         <p className={c.prompt}><span className="muted">{t.contact.l1}</span> {t.contact.l2}</p>
+        <p className={c.direct}>{t.contact.direct} <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
         <div className={c.field}>
           <label htmlFor="ea-email" className="sr-only">{t.contact.email}</label>
           <input id="ea-email" type="email" inputMode="email" autoComplete="email" placeholder={t.contact.email}

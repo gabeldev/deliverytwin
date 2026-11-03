@@ -40,3 +40,5 @@
   .col { margin-left: 0; }
   .field input { height: 60px; }
 }
+.direct { font-size: 0.9375rem; color: var(--muted); }
+.direct a { color: var(--ink); overflow-wrap: anywhere; text-underline-offset: 0.2em; }

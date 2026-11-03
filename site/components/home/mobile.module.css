@@ -2,3 +2,4 @@
 @media (max-width: 1000px) {
   .lead { display: grid; gap: 20px; justify-items: start; padding-block: 24px 0; font-size: 1.0625rem; }
 }
+.business { display: inline-block; margin-top: 14px; margin-left: 4px; font-size: 1rem; color: var(--ink); text-underline-offset: 0.25em; }

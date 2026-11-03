@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Dict, Locale } from "@/lib/i18n";
-import { HF, REPO } from "@/lib/data";
+import { CONTACT_EMAIL, HF, REPO } from "@/lib/site";
 import Reveal from "./Reveal";
 import s from "./chrome.module.css";
 
@@ -20,13 +20,14 @@ export default function SiteChrome({ locale, t, children }: { locale: Locale; t:
           <Link href={`/${locale}/research`}>{t.nav.research}</Link>
           <Link href={`/${locale}#technology`} className={s.hideSm}>{t.nav.technology}</Link>
           <Link href={`/${other}`} hrefLang={other} lang={other === "pt" ? "pt-BR" : "en"} aria-label={t.nav.switchLabel}>{t.nav.switch}</Link>
-          <Link href={`/${locale}#access`} className="btn btn-primary">{t.nav.access}</Link>
+          <Link href={`/${locale}#audit`} className="btn btn-primary">{t.nav.access}</Link>
         </nav>
       </header>
       <main id="main">{children}</main>
       <footer className={`${s.footer} wrap`}>
         <span className="muted">{t.footer.what}</span>
         <span className={s.flinks}>
+          <a href={`mailto:${CONTACT_EMAIL}`}>{t.footer.contact}</a>
           <a href={REPO}>{t.footer.code}</a>
           <a href={HF}>{t.footer.model}</a>
           <a href={`${REPO}/tree/main/docs/reports`}>{t.footer.reports}</a>
