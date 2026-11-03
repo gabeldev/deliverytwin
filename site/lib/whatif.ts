@@ -24,10 +24,10 @@ export function parseWhatIf(raw: string): Parsed {
   if (/placebo|nothing|nada/.test(s)) return { ok: true, key: "placebo", kind: "placebo" };
 
   const has = {
-    couriers: /courier|driver|rider|entregador|motoboy/.test(s),
-    workers: /worker|trabalhador|dispatcher|despach/.test(s) && !/policy|politica/.test(s),
-    retry: /retry|backoff|tentativa|espera/.test(s),
-    policy: /eta|policy|politica|nearest|mais proximo/.test(s),
+    couriers: /courier|driver|rider|entregador|motoboy/.test(s) && !/nearest|mais proximo/.test(s),
+    workers: /worker|trabalhador|dispatcher|despach/.test(s) && !/policy|politica|\beta\b/.test(s),
+    retry: /retry|backoff|tentativa|espera|repetir/.test(s),
+    policy: /\beta\b|policy|politica|nearest|mais proximo/.test(s),
     admission: /accept|admi|aceit|reject|turn away|recus|rejeit|%/.test(s),
   };
   const n = Object.values(has).filter(Boolean).length;
@@ -45,7 +45,7 @@ export function parseWhatIf(raw: string): Parsed {
     return { ok: true, key: `retry_backoff_${used}`, kind: "set_retry_backoff", asked: x, used };
   }
   if (has.policy) {
-    if (/nearest|mais proximo/.test(s) && !/eta/.test(s)) return { ok: false, reason: "current_policy" };
+    if (/nearest|mais proximo/.test(s) && !/\beta\b/.test(s)) return { ok: false, reason: "current_policy" };
     return { ok: true, key: "policy_eta_aware", kind: "set_dispatch_policy" };
   }
   if (has.admission) {

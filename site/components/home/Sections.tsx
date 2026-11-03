@@ -133,7 +133,9 @@ export function Technology({ sc, truth, t, locale }: { sc: Scenario; truth: Trut
               {i === 0 && <pre>{`family: ${truth.reveal.family}\n${Object.entries(truth.reveal.fault).filter(([k]) => k !== "family").map(([k, v]) => `${k}: ${typeof v === "number" ? +v.toFixed(3) : v}`).join("\n")}`}</pre>}
               {i === 1 && <pre>{sc.observe.split("\n").slice(1, 4).join("\n")}</pre>}
               {i === 2 && <pre>{`fork_at(t0=${sc.lab.A.t0}, replica=r)\n  control:   NoOp\n  treatment: set_retry_backoff(0.2)\nreplicas ${sc.lab.A.replica_ids[0]}–${sc.lab.A.replica_ids[1]} · placebo Δ = 0.000`}</pre>}
-              {i === 3 && <pre>{`exact: true/false\npath_f1, evidence validity, Brier\nrecommendation Δ bad-rate in the reference world\n(replicas 1001+, disjoint from the agent's)`}</pre>}
+              {i === 3 && <pre>{locale === "pt"
+                ? `exact: true/false\npath_f1, validade das evidências, Brier\nΔ da taxa ruim da recomendação no mundo de referência\n(réplicas 1001+, separadas das do agente)`
+                : `exact: true/false\npath_f1, evidence validity, Brier\nrecommendation Δ bad-rate in the reference world\n(replicas 1001+, disjoint from the agent's)`}</pre>}
               <p className={x.techSee}>{i === 0 ? t.tech.hidden : `${name} ${t.tech.sees}`}</p>
             </div>
           </li>
